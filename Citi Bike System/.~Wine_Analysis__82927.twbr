@@ -1,0 +1,1050 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/TableauPractice1_17381509087790?rev=1.0' id='TableauPractice1_17381509087790' path='/workbooks' revision='1.4' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Union+ (part2_practice_dataset)' inline='true' name='federated.07nbzoh0s5zcqv1gazrxt1vev4ay' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='part2_practice_dataset' name='excel-direct.0vuwjqu0966p2718lgsgb1mvdx1j'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/teitelbaumsair/Downloads/part2_practice_dataset.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation type='project'>
+            <columns>
+              <column caption='Review_No' hidden='true' name='[Union].[Review_No]' />
+              <column caption='review_id' hidden='true' name='[Union].[review_id]' />
+              <column name='[Project].[Review_No &amp; review_id]' project-type='coalesce' />
+              <column datatype='string' name='Review_No &amp; review_id' ordinal='1' />
+            </columns>
+            <bindings>
+              <binding expression='IF NOT ISNULL([Union].[Review_No]) THEN [Union].[Review_No]&#10;ELSEIF NOT ISNULL([Union].[review_id]) THEN [Union].[review_id]&#10;ELSE NULL&#10;END' name='[Project].[Review_No &amp; review_id]' />
+            </bindings>
+            <relation all='true' name='Union' type='union'>
+              <columns header='yes'>
+                <column datatype='integer' name='Review_No' />
+                <column datatype='string' name='country' />
+                <column datatype='string' name='description' />
+                <column datatype='string' name='designation' />
+                <column datatype='integer' name='points' />
+                <column datatype='string' name='price' />
+                <column datatype='string' name='province' />
+                <column datatype='string' name='region_1' />
+                <column datatype='string' name='region_2' />
+                <column datatype='string' name='title' />
+                <column datatype='string' name='variety' />
+                <column datatype='string' name='winery' />
+                <column datatype='string' name='T_code' />
+                <column datatype='integer' name='review_id' />
+                <column datatype='string' name='Sheet' />
+                <column datatype='string' name='Table Name' />
+              </columns>
+              <relation connection='excel-direct.0vuwjqu0966p2718lgsgb1mvdx1j' name='raw_data' table='[raw_data$]' type='table'>
+                <columns gridOrigin='A1:M4447:no:A1:M4447:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Review_No' ordinal='0' />
+                  <column datatype='string' name='country' ordinal='1' />
+                  <column datatype='string' name='description' ordinal='2' />
+                  <column datatype='string' name='designation' ordinal='3' />
+                  <column datatype='integer' name='points' ordinal='4' />
+                  <column datatype='string' name='price' ordinal='5' />
+                  <column datatype='string' name='province' ordinal='6' />
+                  <column datatype='string' name='region_1' ordinal='7' />
+                  <column datatype='string' name='region_2' ordinal='8' />
+                  <column datatype='string' name='title' ordinal='9' />
+                  <column datatype='string' name='variety' ordinal='10' />
+                  <column datatype='string' name='winery' ordinal='11' />
+                  <column datatype='string' name='T_code' ordinal='12' />
+                </columns>
+              </relation>
+              <relation connection='excel-direct.0vuwjqu0966p2718lgsgb1mvdx1j' name='high_cost' table='[high_cost$]' type='table'>
+                <columns gridOrigin='A1:M34:no:A1:M34:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='review_id' ordinal='0' />
+                  <column datatype='string' name='country' ordinal='1' />
+                  <column datatype='string' name='description' ordinal='2' />
+                  <column datatype='string' name='designation' ordinal='3' />
+                  <column datatype='integer' name='points' ordinal='4' />
+                  <column datatype='string' name='price' ordinal='5' />
+                  <column datatype='string' name='province' ordinal='6' />
+                  <column datatype='string' name='region_1' ordinal='7' />
+                  <column datatype='string' name='region_2' ordinal='8' />
+                  <column datatype='string' name='title' ordinal='9' />
+                  <column datatype='string' name='variety' ordinal='10' />
+                  <column datatype='string' name='winery' ordinal='11' />
+                  <column datatype='string' name='T_code' ordinal='12' />
+                </columns>
+              </relation>
+            </relation>
+          </relation>
+          <relation connection='excel-direct.0vuwjqu0966p2718lgsgb1mvdx1j' name='wine_experts' table='[wine_experts$]' type='table'>
+            <columns gridOrigin='A1:C20:no:A1:C20:0' header='yes' outcome='6'>
+              <column datatype='string' name='taster_name' ordinal='0' />
+              <column datatype='string' name='taster_twitter_handle' ordinal='1' />
+              <column datatype='string' name='T_code' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Review_No &amp; review_id]' value='[Project].[Review_No &amp; review_id]' />
+          <map key='[Sheet]' value='[Union].[Sheet]' />
+          <map key='[T_code (wine!experts)]' value='[wine_experts].[T_code]' />
+          <map key='[T_code]' value='[Union].[T_code]' />
+          <map key='[Table Name]' value='[Union].[Table Name]' />
+          <map key='[country]' value='[Union].[country]' />
+          <map key='[description]' value='[Union].[description]' />
+          <map key='[designation]' value='[Union].[designation]' />
+          <map key='[points]' value='[Union].[points]' />
+          <map key='[price]' value='[Union].[price]' />
+          <map key='[province]' value='[Union].[province]' />
+          <map key='[region_1]' value='[Union].[region_1]' />
+          <map key='[region_2]' value='[Union].[region_2]' />
+          <map key='[taster_name]' value='[wine_experts].[taster_name]' />
+          <map key='[taster_twitter_handle]' value='[wine_experts].[taster_twitter_handle]' />
+          <map key='[title]' value='[Union].[title]' />
+          <map key='[variety]' value='[Union].[variety]' />
+          <map key='[winery]' value='[Union].[winery]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Union]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[wine_experts]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C20:no:A1:C20:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Review_No &amp; review_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Review_No &amp; review_id]</local-name>
+            <parent-name>[Project]</parent-name>
+            <remote-alias>Review_No &amp; review_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>designation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[designation]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>designation</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>points</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[points]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>points</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>province</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[province]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>province</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region_1]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>region_1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region_2]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>region_2</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>variety</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[variety]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>variety</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>winery</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[winery]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>winery</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[T_code]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>T_code</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sheet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sheet]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Sheet</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>taster_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[taster_name]</local-name>
+            <parent-name>[wine_experts]</parent-name>
+            <remote-alias>taster_name</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>taster_twitter_handle</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[taster_twitter_handle]</local-name>
+            <parent-name>[wine_experts]</parent-name>
+            <remote-alias>taster_twitter_handle</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>T_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[T_code (wine!experts)]</local-name>
+            <parent-name>[wine_experts]</parent-name>
+            <remote-alias>T_code</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Price' datatype='real' datatype-customized='true' name='[Calculation_5835468889794039808]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT(REPLACE([price],&quot;,&quot;,&quot;.&quot;))' />
+      </column>
+      <column aggregation='Count' caption='Vintage Year' datatype='date' datatype-customized='true' default-format='*YYYY' name='[Calculation_5835468889794879489]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(IF NOT ISNULL( DATEPARSE ( &quot;yy&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )  ) THEN DATEPARSE ( &quot;yy&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )   ELSEIF NOT ISNULL ( DATEPARSE ( &quot;mm&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )  ) THEN DATEPARSE ( &quot;mm&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )   END)' />
+      </column>
+      <column caption='Age of Wine' datatype='integer' name='[Calculation_5835468889800753154]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='2025-YEAR([Calculation_5835468889794879489])' />
+      </column>
+      <column caption='Price Category' datatype='string' datatype-customized='true' name='[Calculation_5835468889801576451]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_5835468889794039808] &lt;= 50 &#10;    THEN &quot;Affordable&quot; &#10;&#10;ELSEIF [Calculation_5835468889794039808] &lt;=100&#10;    THEN &quot;Pricy&quot;&#10;&#10;ELSE &quot;Expensive&quot;&#10;&#10;END' />
+      </column>
+      <column caption='Review_id' datatype='string' default-role='measure' default-type='quantitative' name='[Review_No &amp; review_id]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Sheet]' role='dimension' type='nominal' />
+      <column caption='T code (wine!experts)' datatype='string' name='[T_code (wine!experts)]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[T_code]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[Table Name]' role='dimension' type='nominal' />
+      <column caption='Union' datatype='table' name='[__tableau_internal_object_id__].[_E8B7D01E93544D4A9AE00E77E7D47487]' role='measure' type='quantitative' />
+      <column caption='wine_experts' datatype='table' name='[__tableau_internal_object_id__].[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' hidden='true' name='[description]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[designation]' role='dimension' type='nominal' />
+      <column caption='price_old' datatype='string' hidden='true' name='[price]' role='dimension' type='nominal' />
+      <column datatype='string' name='[province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' hidden='true' name='[region_2]' role='dimension' type='nominal' />
+      <column caption='Taster Name' datatype='string' name='[taster_name]' role='dimension' type='nominal' />
+      <column caption='Taster Twitter Handle' datatype='string' name='[taster_twitter_handle]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='Data/tableau-temp/#TableauTemp_0xk1bou17t93qv1c2yvcm0up3cm4.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/29/2025 12:35:13 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='_E8B7D01E93544D4A9AE00E77E7D47487' table='[Extract].[_E8B7D01E93544D4A9AE00E77E7D47487]' type='table' />
+            <relation name='wine!experts_8C9893113A084DE3BEAB5D41E29D3261' table='[Extract].[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Review_No &amp; review_id]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[Review_No &amp; review_id]' />
+            <map key='[T_code (wine!experts)]' value='[wine!experts_8C9893113A084DE3BEAB5D41E29D3261].[T_code]' />
+            <map key='[T_code]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[T_code]' />
+            <map key='[country]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[country]' />
+            <map key='[points]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[points]' />
+            <map key='[price]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[price]' />
+            <map key='[province]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[province]' />
+            <map key='[region_1]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[region_1]' />
+            <map key='[taster_name]' value='[wine!experts_8C9893113A084DE3BEAB5D41E29D3261].[taster_name]' />
+            <map key='[taster_twitter_handle]' value='[wine!experts_8C9893113A084DE3BEAB5D41E29D3261].[taster_twitter_handle]' />
+            <map key='[title]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[title]' />
+            <map key='[variety]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[variety]' />
+            <map key='[winery]' value='[_E8B7D01E93544D4A9AE00E77E7D47487].[winery]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Review_No &amp; review_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Review_No &amp; review_id]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>Review_No &amp; review_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Project</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4479</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>points</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[points]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>points</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>142</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>province</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[province]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>province</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>137</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region_1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region_1]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>region_1</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>480</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4340</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>variety</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[variety]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>variety</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>195</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>winery</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[winery]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>winery</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2081</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[T_code]</local-name>
+              <parent-name>[_E8B7D01E93544D4A9AE00E77E7D47487]</parent-name>
+              <remote-alias>T_code</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[_E8B7D01E93544D4A9AE00E77E7D47487]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>taster_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[taster_name]</local-name>
+              <parent-name>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</parent-name>
+              <remote-alias>taster_name</remote-alias>
+              <ordinal>10</ordinal>
+              <family>wine_experts</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>taster_twitter_handle</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[taster_twitter_handle]</local-name>
+              <parent-name>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</parent-name>
+              <remote-alias>taster_twitter_handle</remote-alias>
+              <ordinal>11</ordinal>
+              <family>wine_experts</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>T_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[T_code (wine!experts)]</local-name>
+              <parent-name>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</parent-name>
+              <remote-alias>T_code</remote-alias>
+              <ordinal>12</ordinal>
+              <family>wine_experts</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RGB_S2' />
+              <object-id>[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Review_No &amp; review_id' />
+        <field-sort-custom-order field='country' />
+        <field-sort-custom-order field='description' />
+        <field-sort-custom-order field='designation' />
+        <field-sort-custom-order field='points' />
+        <field-sort-custom-order field='price' />
+        <field-sort-custom-order field='Calculation_5835468889794039808' />
+        <field-sort-custom-order field='province' />
+        <field-sort-custom-order field='region_1' />
+        <field-sort-custom-order field='region_2' />
+        <field-sort-custom-order field='title' />
+        <field-sort-custom-order field='variety' />
+        <field-sort-custom-order field='winery' />
+        <field-sort-custom-order field='T_code' />
+        <field-sort-custom-order field='Sheet' />
+        <field-sort-custom-order field='Table Name' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='Union' id='_E8B7D01E93544D4A9AE00E77E7D47487'>
+            <properties context=''>
+              <relation type='project'>
+                <columns>
+                  <column caption='Review_No' hidden='true' name='[Union].[Review_No]' />
+                  <column caption='review_id' hidden='true' name='[Union].[review_id]' />
+                  <column name='[Project].[Review_No &amp; review_id]' project-type='coalesce' />
+                  <column datatype='string' name='Review_No &amp; review_id' ordinal='1' />
+                </columns>
+                <bindings>
+                  <binding expression='IF NOT ISNULL([Union].[Review_No]) THEN [Union].[Review_No]&#10;ELSEIF NOT ISNULL([Union].[review_id]) THEN [Union].[review_id]&#10;ELSE NULL&#10;END' name='[Project].[Review_No &amp; review_id]' />
+                </bindings>
+                <relation all='true' name='Union' type='union'>
+                  <columns header='yes'>
+                    <column datatype='integer' name='Review_No' />
+                    <column datatype='string' name='country' />
+                    <column datatype='string' name='description' />
+                    <column datatype='string' name='designation' />
+                    <column datatype='integer' name='points' />
+                    <column datatype='string' name='price' />
+                    <column datatype='string' name='province' />
+                    <column datatype='string' name='region_1' />
+                    <column datatype='string' name='region_2' />
+                    <column datatype='string' name='title' />
+                    <column datatype='string' name='variety' />
+                    <column datatype='string' name='winery' />
+                    <column datatype='string' name='T_code' />
+                    <column datatype='integer' name='review_id' />
+                    <column datatype='string' name='Sheet' />
+                    <column datatype='string' name='Table Name' />
+                  </columns>
+                  <relation connection='excel-direct.0vuwjqu0966p2718lgsgb1mvdx1j' name='raw_data' table='[raw_data$]' type='table'>
+                    <columns gridOrigin='A1:M4447:no:A1:M4447:0' header='yes' outcome='2'>
+                      <column datatype='integer' name='Review_No' ordinal='0' />
+                      <column datatype='string' name='country' ordinal='1' />
+                      <column datatype='string' name='description' ordinal='2' />
+                      <column datatype='string' name='designation' ordinal='3' />
+                      <column datatype='integer' name='points' ordinal='4' />
+                      <column datatype='string' name='price' ordinal='5' />
+                      <column datatype='string' name='province' ordinal='6' />
+                      <column datatype='string' name='region_1' ordinal='7' />
+                      <column datatype='string' name='region_2' ordinal='8' />
+                      <column datatype='string' name='title' ordinal='9' />
+                      <column datatype='string' name='variety' ordinal='10' />
+                      <column datatype='string' name='winery' ordinal='11' />
+                      <column datatype='string' name='T_code' ordinal='12' />
+                    </columns>
+                  </relation>
+                  <relation connection='excel-direct.0vuwjqu0966p2718lgsgb1mvdx1j' name='high_cost' table='[high_cost$]' type='table'>
+                    <columns gridOrigin='A1:M34:no:A1:M34:0' header='yes' outcome='2'>
+                      <column datatype='integer' name='review_id' ordinal='0' />
+                      <column datatype='string' name='country' ordinal='1' />
+                      <column datatype='string' name='description' ordinal='2' />
+                      <column datatype='string' name='designation' ordinal='3' />
+                      <column datatype='integer' name='points' ordinal='4' />
+                      <column datatype='string' name='price' ordinal='5' />
+                      <column datatype='string' name='province' ordinal='6' />
+                      <column datatype='string' name='region_1' ordinal='7' />
+                      <column datatype='string' name='region_2' ordinal='8' />
+                      <column datatype='string' name='title' ordinal='9' />
+                      <column datatype='string' name='variety' ordinal='10' />
+                      <column datatype='string' name='winery' ordinal='11' />
+                      <column datatype='string' name='T_code' ordinal='12' />
+                    </columns>
+                  </relation>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='_E8B7D01E93544D4A9AE00E77E7D47487' table='[Extract].[_E8B7D01E93544D4A9AE00E77E7D47487]' type='table' />
+            </properties>
+          </object>
+          <object caption='wine_experts' id='wine!experts_8C9893113A084DE3BEAB5D41E29D3261'>
+            <properties context=''>
+              <relation connection='excel-direct.0vuwjqu0966p2718lgsgb1mvdx1j' name='wine_experts' table='[wine_experts$]' type='table'>
+                <columns gridOrigin='A1:C20:no:A1:C20:0' header='yes' outcome='6'>
+                  <column datatype='string' name='taster_name' ordinal='0' />
+                  <column datatype='string' name='taster_twitter_handle' ordinal='1' />
+                  <column datatype='string' name='T_code' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='wine!experts_8C9893113A084DE3BEAB5D41E29D3261' table='[Extract].[wine!experts_8C9893113A084DE3BEAB5D41E29D3261]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[T_code]' />
+              <expression op='[T_code (wine!experts)]' />
+            </expression>
+            <first-end-point object-id='_E8B7D01E93544D4A9AE00E77E7D47487' />
+            <second-end-point object-id='wine!experts_8C9893113A084DE3BEAB5D41E29D3261' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Country PRice'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union+ (part2_practice_dataset)' name='federated.07nbzoh0s5zcqv1gazrxt1vev4ay' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.07nbzoh0s5zcqv1gazrxt1vev4ay'>
+            <column caption='Price' datatype='real' datatype-customized='true' name='[Calculation_5835468889794039808]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT(REPLACE([price],&quot;,&quot;,&quot;.&quot;))' />
+            </column>
+            <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[Calculation_5835468889794039808]' derivation='Median' name='[med:Calculation_5835468889794039808:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column caption='price_old' datatype='string' hidden='true' name='[price]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:country:nk]' />
+              <color column='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[med:Calculation_5835468889794039808:qk]' />
+              <geometry column='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[Latitude (generated)]</rows>
+        <cols>[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{136317F8-B63F-4931-AD79-833097177053}' />
+    </worksheet>
+    <worksheet name='Price'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union+ (part2_practice_dataset)' name='federated.07nbzoh0s5zcqv1gazrxt1vev4ay' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07nbzoh0s5zcqv1gazrxt1vev4ay'>
+            <column caption='Price' datatype='real' datatype-customized='true' name='[Calculation_5835468889794039808]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT(REPLACE([price],&quot;,&quot;,&quot;.&quot;))' />
+            </column>
+            <column caption='Price Category' datatype='string' datatype-customized='true' name='[Calculation_5835468889801576451]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_5835468889794039808] &lt;= 50 &#10;    THEN &quot;Affordable&quot; &#10;&#10;ELSEIF [Calculation_5835468889794039808] &lt;=100&#10;    THEN &quot;Pricy&quot;&#10;&#10;ELSE &quot;Expensive&quot;&#10;&#10;END' />
+            </column>
+            <column caption='Union' datatype='table' name='[__tableau_internal_object_id__].[_E8B7D01E93544D4A9AE00E77E7D47487]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[_E8B7D01E93544D4A9AE00E77E7D47487]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:_E8B7D01E93544D4A9AE00E77E7D47487:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5835468889794039808]' derivation='None' name='[none:Calculation_5835468889794039808:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_5835468889801576451]' derivation='None' name='[none:Calculation_5835468889801576451:nk]' pivot='key' type='nominal' />
+            <column caption='price_old' datatype='string' hidden='true' name='[price]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[__tableau_internal_object_id__].[cnt:_E8B7D01E93544D4A9AE00E77E7D47487:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:Calculation_5835468889794039808:ok] / [federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:Calculation_5835468889801576451:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{229EEDE3-9486-41AC-9E53-78CA325F3875}' />
+    </worksheet>
+    <worksheet name='Title /Vintage/Age'>
+      <repository-location derived-from='https://haproxy-traffic-splitter/workbooks/TableauPractice1_17381509087790/Sheet1?rev=' id='111484182' path='/workbooks/TableauPractice1_17381509087790' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union+ (part2_practice_dataset)' name='federated.07nbzoh0s5zcqv1gazrxt1vev4ay' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07nbzoh0s5zcqv1gazrxt1vev4ay'>
+            <column aggregation='Count' caption='Vintage Year' datatype='date' datatype-customized='true' default-format='*YYYY' name='[Calculation_5835468889794879489]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(IF NOT ISNULL( DATEPARSE ( &quot;yy&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )  ) THEN DATEPARSE ( &quot;yy&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )   ELSEIF NOT ISNULL ( DATEPARSE ( &quot;mm&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )  ) THEN DATEPARSE ( &quot;mm&quot;, REGEXP_EXTRACT([title],&apos;[a-z]+\s+(\d+)&apos;) )   END)' />
+            </column>
+            <column caption='Age of Wine' datatype='integer' name='[Calculation_5835468889800753154]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='2025-YEAR([Calculation_5835468889794879489])' />
+            </column>
+            <column caption='Union' datatype='table' name='[__tableau_internal_object_id__].[_E8B7D01E93544D4A9AE00E77E7D47487]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[_E8B7D01E93544D4A9AE00E77E7D47487]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:_E8B7D01E93544D4A9AE00E77E7D47487:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5835468889794879489]' derivation='None' name='[none:Calculation_5835468889794879489:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_5835468889800753154]' derivation='None' name='[none:Calculation_5835468889800753154:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='129' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:title:nk]' value='380' />
+            <format attr='width' field='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:Calculation_5835468889794879489:ok]' value='128' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[__tableau_internal_object_id__].[cnt:_E8B7D01E93544D4A9AE00E77E7D47487:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:title:nk] / ([federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:Calculation_5835468889794879489:ok] / [federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:Calculation_5835468889800753154:ok]))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{AE59CAE4-CAEF-40E1-A41E-DB75B4594686}' />
+    </worksheet>
+    <worksheet name='Vareity of Wine'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union+ (part2_practice_dataset)' name='federated.07nbzoh0s5zcqv1gazrxt1vev4ay' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07nbzoh0s5zcqv1gazrxt1vev4ay'>
+            <column caption='Union' datatype='table' name='[__tableau_internal_object_id__].[_E8B7D01E93544D4A9AE00E77E7D47487]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[_E8B7D01E93544D4A9AE00E77E7D47487]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:_E8B7D01E93544D4A9AE00E77E7D47487:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[variety]' derivation='None' name='[none:variety:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[variety]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:variety:nk]' direction='DESC' using='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[__tableau_internal_object_id__].[cnt:_E8B7D01E93544D4A9AE00E77E7D47487:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[__tableau_internal_object_id__].[cnt:_E8B7D01E93544D4A9AE00E77E7D47487:qk]</rows>
+        <cols>[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[none:variety:nk]</cols>
+      </table>
+      <simple-id uuid='{ECAA0830-DFED-4FF2-877A-1A3A1CDE8343}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Title /Vintage/Age'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A1FCD2CB-0E9F-420F-88EB-43AE5EFD8848}' />
+    </window>
+    <window class='worksheet' name='Price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D656A7B0-CD4B-4D39-880D-97E8183B3E31}' />
+    </window>
+    <window class='worksheet' name='Vareity of Wine'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{336EA78C-7A98-40A1-BC14-D312EAF95308}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Country PRice'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='0'>
+            <card pane-specification-id='0' param='[federated.07nbzoh0s5zcqv1gazrxt1vev4ay].[med:Calculation_5835468889794039808:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C2ECA42B-3391-4708-AD8A-156A7B607656}' />
+    </window>
+  </windows>
+</workbook>

@@ -1,0 +1,2501 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <VizInTooltipHideWorksheet />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneFriendlyName />
+  </document-format-change-manifest>
+  <repository-location id='CitiBike_2018_17382292268710' path='/workbooks' revision='1.4' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='trip_data_2018' inline='true' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='trip_data_2018' name='textscan.1r3kngu1gvvju51910p6s14kniii'>
+            <connection class='textscan' directory='/Users/teitelbaumsair/Desktop/Open-Source-Data-Projects/Citi Bike System' filename='trip_data_2018.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1r3kngu1gvvju51910p6s14kniii' name='trip_data_2018 (1).csv' table='[trip_data_2018 (1)#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='trip id' ordinal='0' />
+            <column datatype='integer' name='tripduration' ordinal='1' />
+            <column datatype='datetime' name='starttime' ordinal='2' />
+            <column datatype='datetime' name='stoptime' ordinal='3' />
+            <column datatype='string' name='start station id' ordinal='4' />
+            <column datatype='string' name='start station name' ordinal='5' />
+            <column datatype='real' name='start station latitude' ordinal='6' />
+            <column datatype='real' name='start station longitude' ordinal='7' />
+            <column datatype='string' name='end station id' ordinal='8' />
+            <column datatype='string' name='end station name' ordinal='9' />
+            <column datatype='real' name='end station latitude' ordinal='10' />
+            <column datatype='real' name='end station longitude' ordinal='11' />
+            <column datatype='string' name='bike id' ordinal='12' />
+            <column datatype='string' name='usertype' ordinal='13' />
+            <column datatype='date' date-parse-format='yyyy' name='birth year' ordinal='14' />
+            <column datatype='integer' name='gender' ordinal='15' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trip id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[trip id]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>trip id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bike id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bike id]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>bike id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[trip_data_2018 (1).csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+      </column>
+      <column caption='Gender Label' datatype='string' name='[Calculation_6579407253544095746]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [gender] = &quot;0&quot;&#10; THEN &quot;Unknown&quot;&#10;ELSEIF [gender] = &quot;1&quot;&#10; THEN &quot;Male&quot;&#10;ELSEIF [gender] = &quot;2&quot;&#10; THEN &quot;Female&quot;&#10;END' />
+      </column>
+      <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[tripduration]/60' />
+      </column>
+      <column caption='Distinct Days' datatype='integer' name='[Calculation_6579407253545246724]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(DATE([starttime]))' />
+      </column>
+      <column caption='Avg Trips Per Day' datatype='real' name='[Calculation_6579407253545340933]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_6579407253543391232])/[Calculation_6579407253545246724]' />
+      </column>
+      <column caption='Weekend Label' datatype='string' name='[Calculation_6696571212616974336]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF DATEPART(&apos;weekday&apos;,[starttime])=1&#10;    OR DATEPART(&apos;weekday&apos;,[starttime])=7&#10;    THEN &apos;Weekend&apos;&#10;ELSE &apos;Weekday&apos;&#10;END' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[User Age (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[Calculation_6579407253544022017]' peg='0' size='5' />
+      </column>
+      <column caption='trip_data_2018 (1).csv' datatype='table' hidden='true' name='[__tableau_internal_object_id__].[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]' role='measure' type='quantitative' />
+      <column caption='Bike Id' datatype='string' name='[bike id]' role='dimension' type='nominal' />
+      <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+      <column caption='End Station Id' datatype='string' name='[end station id]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' datatype-customized='true' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Start Station Id' datatype='string' name='[start station id]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+      <column caption='Trip Id' datatype='string' name='[trip id]' role='dimension' type='nominal' />
+      <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+      <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_6696571212616974336]' derivation='None' name='[none:Calculation_6696571212616974336:nk]' pivot='key' type='nominal' />
+      <column-instance column='[start station latitude]' derivation='None' name='[none:start station latitude:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[start station longitude]' derivation='None' name='[none:start station longitude:ok]' pivot='key' type='ordinal' />
+      <group caption='Tooltip (Start Station Latitude,Start Station Longitude,Start Station Name)' hidden='true' name='[Tooltip (Start Station Latitude,Start Station Longitude,Start Station Name)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:start station latitude:ok]' />
+          <groupfilter function='level-members' level='[none:start station longitude:ok]' />
+          <groupfilter function='level-members' level='[start station name]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='/var/folders/_7/7nx4t_6s6995xg_cj866wrmr0000gn/T/tableau-temp/#TableauTemp_0b2biru05vlwsp13ego871fu5q1o.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>trip id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[trip id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trip id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>353892</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tripduration</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tripduration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tripduration</remote-alias>
+              <ordinal>1</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5995</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>starttime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[starttime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>starttime</remote-alias>
+              <ordinal>2</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>299993</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>stoptime</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[stoptime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stoptime</remote-alias>
+              <ordinal>3</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>310775</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[start station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station latitude</remote-alias>
+              <ordinal>6</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[start station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start station longitude</remote-alias>
+              <ordinal>7</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end station id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[end station name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station name</remote-alias>
+              <ordinal>9</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station latitude</remote-alias>
+              <ordinal>10</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>end station longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[end station longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>end station longitude</remote-alias>
+              <ordinal>11</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>77</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bike id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bike id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bike id</remote-alias>
+              <ordinal>12</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2885</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usertype</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[usertype]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usertype</remote-alias>
+              <ordinal>13</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birth year</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[birth year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>birth year</remote-alias>
+              <ordinal>14</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>74</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>15</ordinal>
+              <family>trip_data_2018 (1).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_6696571212616974336:nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>&quot;Weekday&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Weekend&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='trip_data_2018 (1).csv' id='trip_data_2018 (1).csv_B7DE0D935691418A9BE5FA3C1CD639F5'>
+            <properties context=''>
+              <relation connection='textscan.1r3kngu1gvvju51910p6s14kniii' name='trip_data_2018 (1).csv' table='[trip_data_2018 (1)#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='trip id' ordinal='0' />
+                  <column datatype='integer' name='tripduration' ordinal='1' />
+                  <column datatype='datetime' name='starttime' ordinal='2' />
+                  <column datatype='datetime' name='stoptime' ordinal='3' />
+                  <column datatype='string' name='start station id' ordinal='4' />
+                  <column datatype='string' name='start station name' ordinal='5' />
+                  <column datatype='real' name='start station latitude' ordinal='6' />
+                  <column datatype='real' name='start station longitude' ordinal='7' />
+                  <column datatype='string' name='end station id' ordinal='8' />
+                  <column datatype='string' name='end station name' ordinal='9' />
+                  <column datatype='real' name='end station latitude' ordinal='10' />
+                  <column datatype='real' name='end station longitude' ordinal='11' />
+                  <column datatype='string' name='bike id' ordinal='12' />
+                  <column datatype='string' name='usertype' ordinal='13' />
+                  <column datatype='date' date-parse-format='yyyy' name='birth year' ordinal='14' />
+                  <column datatype='integer' name='gender' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+      <datasources>
+        <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+        <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+        </column>
+        <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='[tripduration]/60' />
+        </column>
+        <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='quantitative' column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]' included-values='in-range'>
+        <max>100</max>
+      </filter>
+      <filter class='quantitative' column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]' included-values='in-range'>
+        <min>1.0166666666666666</min>
+        <max>4320.0</max>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_5129C4B74BB2480496C6F92A47E2BF0B]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Gender Treemap' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Active Stations'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;SheetName&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[start station id]' derivation='CountD' name='[ctd:start station id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column caption='Start Station Id' datatype='string' name='[start station id]' role='dimension' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[ctd:start station id:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='48'>&lt;</run>
+                <run fontsize='48'>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[ctd:start station id:qk]</run>
+                <run fontsize='48'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B97D3434-7253-42F6-AD90-2717F4C454F6}' />
+    </worksheet>
+    <worksheet name='Average Trips Per Day in 2018'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;SheetName&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Distinct Days' datatype='integer' name='[Calculation_6579407253545246724]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(DATE([starttime]))' />
+            </column>
+            <column caption='Avg Trips Per Day' datatype='real' name='[Calculation_6579407253545340933]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_6579407253543391232])/[Calculation_6579407253545246724]' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6579407253545340933]' derivation='User' name='[usr:Calculation_6579407253545340933:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='48'>&lt;</run>
+                <run fontsize='48'>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]</run>
+                <run fontsize='48'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BCDCB8AC-F858-4562-8C3E-F9ED42705C00}' />
+    </worksheet>
+    <worksheet name='Bar Graph Drill Down'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>AVG # of Trips Per Hour -- Weekend vs. Weekday</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Distinct Days' datatype='integer' name='[Calculation_6579407253545246724]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(DATE([starttime]))' />
+            </column>
+            <column caption='Avg Trips Per Day' datatype='real' name='[Calculation_6579407253545340933]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_6579407253543391232])/[Calculation_6579407253545246724]' />
+            </column>
+            <column caption='Weekend Label' datatype='string' name='[Calculation_6696571212616974336]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF DATEPART(&apos;weekday&apos;,[starttime])=1&#10;    OR DATEPART(&apos;weekday&apos;,[starttime])=7&#10;    THEN &apos;Weekend&apos;&#10;ELSE &apos;Weekday&apos;&#10;END' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6696571212616974336]' derivation='None' name='[none:Calculation_6696571212616974336:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station latitude]' derivation='None' name='[none:start station latitude:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[start station longitude]' derivation='None' name='[none:start station longitude:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6579407253545340933]' derivation='User' name='[usr:Calculation_6579407253545340933:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[Tooltip (Start Station Latitude,Start Station Longitude,Start Station Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Bar Graph Drill Down]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:start station latitude:ok]' />
+              <groupfilter function='level-members' level='[none:start station longitude:ok]' />
+              <groupfilter function='level-members' level='[start station name]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[Tooltip (Start Station Latitude,Start Station Longitude,Start Station Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6696571212616974336:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]</rows>
+        <cols>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[hr:starttime:ok]</cols>
+      </table>
+      <simple-id uuid='{A078B39B-731B-44F1-9C00-65CC313D5E10}' />
+    </worksheet>
+    <worksheet name='Bikes in Citi Bike fleet'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;SheetName&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Bike Id' datatype='string' name='[bike id]' role='dimension' type='nominal' />
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[bike id]' derivation='CountD' name='[ctd:bike id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[ctd:bike id:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='48'>&lt;</run>
+                <run fontsize='48'>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[ctd:bike id:qk]</run>
+                <run fontsize='48'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8D0B8149-0411-4584-BE44-BD9F5D415AFE}' />
+    </worksheet>
+    <worksheet name='Gender Treemap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Gender Label' datatype='string' name='[Calculation_6579407253544095746]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = &quot;0&quot;&#10; THEN &quot;Unknown&quot;&#10;ELSEIF [gender] = &quot;1&quot;&#10; THEN &quot;Male&quot;&#10;ELSEIF [gender] = &quot;2&quot;&#10; THEN &quot;Female&quot;&#10;END' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column caption='Gender' datatype='string' datatype-customized='true' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544095746]' derivation='None' name='[none:Calculation_6579407253544095746:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253543391232]' derivation='Sum' name='[pcto:sum:Calculation_6579407253543391232:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253543391232]' derivation='Sum' name='[sum:Calculation_6579407253543391232:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544095746:nk]' />
+              <size column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544095746:nk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[pcto:sum:Calculation_6579407253543391232:qk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#b4b4b4'><![CDATA[<[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544095746:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run><![CDATA[<[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[pcto:sum:Calculation_6579407253543391232:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='match' />
+                <format attr='font-size' value='20' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C0523FF9-D482-454C-9191-ADB5F4A2470E}' />
+    </worksheet>
+    <worksheet name='Heat Table'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Number of Trips: Time of Day and Day of Week</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Distinct Days' datatype='integer' name='[Calculation_6579407253545246724]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(DATE([starttime]))' />
+            </column>
+            <column caption='Avg Trips Per Day' datatype='real' name='[Calculation_6579407253545340933]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_6579407253543391232])/[Calculation_6579407253545246724]' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6579407253545340933]' derivation='User' name='[usr:Calculation_6579407253545340933:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[starttime]' derivation='Weekday' name='[wd:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[wd:starttime:ok]' value='71' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[hr:starttime:ok]' value='128' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[hr:starttime:ok]</rows>
+        <cols>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[wd:starttime:ok]</cols>
+      </table>
+      <simple-id uuid='{E3292A0B-B4B7-4959-B7D7-DECC845B3F0E}' />
+    </worksheet>
+    <worksheet name='Histogram'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column aggregation='None' datatype='integer' name='[User Age (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='0' formula='[Calculation_6579407253544022017]' peg='0' size='5' />
+            </column>
+            <column-instance column='[Calculation_6579407253544022017]' derivation='Avg' name='[avg:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='Count' name='[cnt:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[User Age (bin)]' derivation='None' name='[none:User Age (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:User Age (bin):qk]' scope='cols' value='Age Groups' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:User Age (bin):qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:User Age (bin):qk]' />
+              <tooltip column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[avg:Calculation_6579407253544022017:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[cnt:Calculation_6579407253544022017:qk]</rows>
+        <cols>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:User Age (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[User Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{CB3763B2-B172-4ECE-8F5E-82CECB27710F}' />
+    </worksheet>
+    <worksheet name='Legend for Tooltip'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Weekend Label' datatype='string' name='[Calculation_6696571212616974336]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF DATEPART(&apos;weekday&apos;,[starttime])=1&#10;    OR DATEPART(&apos;weekday&apos;,[starttime])=7&#10;    THEN &apos;Weekend&apos;&#10;ELSE &apos;Weekday&apos;&#10;END' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6696571212616974336]' derivation='None' name='[none:Calculation_6696571212616974336:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station latitude]' derivation='None' name='[none:start station latitude:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[start station longitude]' derivation='None' name='[none:start station longitude:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[Tooltip (Start Station Latitude,Start Station Longitude,Start Station Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Legend for Tooltip]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:start station latitude:ok]' />
+              <groupfilter function='level-members' level='[none:start station longitude:ok]' />
+              <groupfilter function='level-members' level='[start station name]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[Tooltip (Start Station Latitude,Start Station Longitude,Start Station Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6696571212616974336:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6696571212616974336:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{44B9E1AE-3CAB-4838-BD66-8ED7822214A2}' />
+    </worksheet>
+    <worksheet name='Line Graph'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Trips per Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Month' name='[mn:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253543391232]' derivation='Sum' name='[sum:Calculation_6579407253543391232:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[mn:starttime:ok]' value='45' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' palette='orange_blue_white_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-color' id='refline0' value='#da02007c' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='reverse-palette' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.263370156288147' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]</rows>
+        <cols>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[mn:starttime:ok]</cols>
+      </table>
+      <simple-id uuid='{F2CD1695-1AE3-4575-8D72-51AFE19563C6}' />
+    </worksheet>
+    <worksheet name='Number Of Records'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;SheetName&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253543391232]' derivation='Sum' name='[sum:Calculation_6579407253543391232:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='48'>&lt;</run>
+                <run fontsize='48'>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]</run>
+                <run fontsize='48'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BBF5A9D4-184B-4680-ACD8-D380B16DA92F}' />
+    </worksheet>
+    <worksheet name='Records Drill Down/ Month'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Distinct Days' datatype='integer' name='[Calculation_6579407253545246724]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(DATE([starttime]))' />
+            </column>
+            <column caption='Avg Trips Per Day' datatype='real' name='[Calculation_6579407253545340933]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_6579407253543391232])/[Calculation_6579407253545246724]' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Month' name='[mn:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253543391232]' derivation='Sum' name='[sum:Calculation_6579407253543391232:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6579407253545246724]' derivation='User' name='[usr:Calculation_6579407253545246724:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253545340933]' derivation='User' name='[usr:Calculation_6579407253545340933:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545246724:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[mn:starttime:ok]' value='75' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[Multiple Values]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[Multiple Values]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[:Measure Names]</rows>
+        <cols>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[mn:starttime:ok]</cols>
+      </table>
+      <simple-id uuid='{7E2ADE79-7BD2-439C-B0B4-AFB3AE84BEBA}' />
+    </worksheet>
+    <worksheet name='Top Stations Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top (Start) Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Distinct Days' datatype='integer' name='[Calculation_6579407253545246724]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(DATE([starttime]))' />
+            </column>
+            <column caption='Avg Trips Per Day' datatype='real' name='[Calculation_6579407253545340933]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_6579407253543391232])/[Calculation_6579407253545246724]' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station id]' derivation='None' name='[none:start station id:nk]' pivot='key' type='nominal' />
+            <column-instance column='[start station latitude]' derivation='None' name='[none:start station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station longitude]' derivation='None' name='[none:start station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column caption='Start Station Id' datatype='string' name='[start station id]' role='dimension' type='nominal' />
+            <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_6579407253545340933]' derivation='User' name='[usr:Calculation_6579407253545340933:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station id:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='[Calculation_6579407253545340933]' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:start station id:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station id:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station longitude:qk]' field-type='quantitative' max='-8233342.8905891841' min='-8233849.7511964161' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station latitude:qk]' field-type='quantitative' max='4976271.8352699' min='4976016.158609055' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' palette='orange_blue_white_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' value='Avg. Trips Per Day'>
+              <formatted-text>
+                <run fontcolor='#271a38' fontname='Inter'>Avg. Trips Per Day</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='streets' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' />
+              <size column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station name:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Start Station Latitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station latitude:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Start Station Longitude:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station longitude:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Start Station Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg Trips Per Day:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true'><![CDATA[<Sheet name="Legend for Tooltip" maxwidth="300" maxheight="300" filter="<All Fields>">]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<Sheet name="Bar Graph Drill Down" maxwidth="300" maxheight="300" filter="<All Fields>">]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+                <format attr='size' value='1.4172928333282471' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station latitude:qk]</rows>
+        <cols>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:start station longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{3B836762-B0CD-44ED-B525-DE3D5010526F}' />
+    </worksheet>
+    <worksheet name='User Type Pie Chart'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='trip_data_2018' name='federated.1i77zov1pt47fp1f0gksh0fuvxhf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i77zov1pt47fp1f0gksh0fuvxhf'>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_6579407253543391232]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='User Age' datatype='integer' name='[Calculation_6579407253544022017]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='YEAR([starttime])-YEAR([birth year])' />
+            </column>
+            <column caption='Trip Duration (min) ' datatype='real' name='[Calculation_6579407253544185859]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[tripduration]/60' />
+            </column>
+            <column caption='Birth Year' datatype='date' name='[birth year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253544022017]' derivation='None' name='[none:Calculation_6579407253544022017:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_6579407253544185859]' derivation='None' name='[none:Calculation_6579407253544185859:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_6579407253543391232]' derivation='Sum' name='[pcto:sum:Calculation_6579407253543391232:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_6579407253543391232]' derivation='Sum' name='[sum:Calculation_6579407253543391232:qk]' pivot='key' type='quantitative' />
+            <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544022017:qk]</column>
+            <column>[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544185859:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:usertype:nk]' />
+              <wedge-size column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' />
+              <size column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:usertype:nk]' />
+              <text column='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[pcto:sum:Calculation_6579407253543391232:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='match' />
+                <format attr='font-size' value='20' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.3073480129241943' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8F2BF532-F43C-4CD7-99C9-EB9E9EE82D7C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#271a38' fontsize='30'>Citi Bike Share System -- Trip History for 2018</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#271a38' fontsize='30'>(sample population: trips</run>
+            <run fontalignment='1' fontcolor='#271a38' fontsize='30' italic='true'> starting in Jersey City</run>
+            <run fontalignment='1' fontcolor='#271a38' fontsize='30'>)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='2500' maxwidth='1266' minheight='2500' minwidth='1266' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='99360' id='57' param='horz' type-v2='layout-flow' w='98736' x='632' y='320'>
+            <zone h='99360' id='54' param='horz' type-v2='layout-flow' w='98736' x='632' y='320'>
+              <zone h='99360' id='48' param='horz' type-v2='layout-flow' w='98736' x='632' y='320'>
+                <zone h='99360' id='35' param='horz' type-v2='layout-flow' w='98736' x='632' y='320'>
+                  <zone friendly-name='OUTER' h='99360' id='14' param='vert' type-v2='layout-flow' w='98736' x='632' y='320'>
+                    <zone h='1280' id='16' type-v2='title' w='98736' x='632' y='320'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone fixed-size='180' friendly-name='Metric 1' h='7200' id='17' is-fixed='true' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='98736' x='632' y='1600'>
+                      <zone h='3600' id='26' name='Number Of Records' show-title='false' w='98736' x='632' y='1600'>
+                        <layout-cache cell-count-h='1' type-h='cell' type-w='cell' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone fixed-size='65' forceUpdate='true' h='3600' id='19' is-fixed='true' type-v2='text' w='98736' x='632' y='5200'>
+                        <formatted-text>
+                          <run fontalignment='1' fontsize='30'>Total Trips</run>
+                        </formatted-text>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                    <zone fixed-size='114' friendly-name='Metrics 2-4' h='4560' id='20' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='98736' x='632' y='8800'>
+                      <zone fixed-size='384' h='4560' id='27' is-fixed='true' name='Average Trips Per Day in 2018' w='32938' x='632' y='8800'>
+                        <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone fixed-size='554' h='4560' id='28' is-fixed='true' name='Active Stations' w='32939' x='33570' y='8800'>
+                        <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='4560' id='29' name='Bikes in Citi Bike fleet' w='32859' x='66509' y='8800'>
+                        <layout-cache cell-count-h='1' cell-count-w='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                    <zone fixed-size='323' friendly-name='Who Box' h='12920' id='30' is-fixed='true' param='vert' type-v2='layout-flow' w='98736' x='632' y='13360'>
+                      <zone forceUpdate='true' h='1840' id='31' type-v2='text' w='98736' x='632' y='13360'>
+                        <formatted-text>
+                          <run fontalignment='1' fontsize='20'>Citi Bike Demographics</run>
+                        </formatted-text>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone friendly-name='User Visuals' h='11080' id='32' param='horz' type-v2='layout-flow' w='98736' x='632' y='15200'>
+                        <zone fixed-size='415' h='11080' id='33' is-fixed='true' name='Gender Treemap' show-title='false' w='33412' x='632' y='15200'>
+                          <layout-cache fixed-size-h='256' type-h='fixed' type-w='fixed' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                        <zone fixed-size='379' h='11080' id='37' is-fixed='true' name='Histogram' show-title='false' w='30569' x='34044' y='15200'>
+                          <layout-cache minheight='155' minwidth='166' type-h='scalable' type-w='scalable' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                        <zone h='11080' id='39' name='User Type Pie Chart' show-title='false' w='34755' x='64613' y='15200'>
+                          <layout-cache cell-count-h='1' type-h='cell' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                      </zone>
+                    </zone>
+                    <zone fixed-size='506' friendly-name='When Box' h='20240' id='40' is-fixed='true' param='vert' type-v2='layout-flow' w='98736' x='632' y='26280'>
+                      <zone h='1840' id='41' type-v2='text' w='98736' x='632' y='26280'>
+                        <formatted-text>
+                          <run fontalignment='1' fontsize='20'>Citi Bike Trips Over Time</run>
+                        </formatted-text>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone fixed-size='457' friendly-name='Time Segment Visuals' h='18280' id='42' is-fixed='true' param='horz' type-v2='layout-flow' w='98736' x='632' y='28120'>
+                        <zone fixed-size='630' h='18280' id='45' is-fixed='true' name='Heat Table' w='50395' x='632' y='28120'>
+                          <layout-cache cell-count-h='24' non-cell-size-h='63' type-h='cell' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                        <zone h='18280' id='46' name='Line Graph' w='48340' x='51027' y='28120'>
+                          <layout-cache cell-count-w='12' minheight='188' non-cell-size-w='59' type-h='scalable' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                      </zone>
+                    </zone>
+                    <zone fixed-size='1847' friendly-name='Where Box' h='53160' id='49' is-fixed='true' param='vert' type-v2='layout-flow' w='98736' x='632' y='46520'>
+                      <zone h='1840' id='50' type-v2='text' w='98736' x='632' y='46520'>
+                        <formatted-text>
+                          <run fontalignment='1' fontsize='20'>Citi Bike (Start) Station</run>
+                        </formatted-text>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone fixed-size='1260' h='50400' id='51' is-fixed='true' param='vert' type-v2='layout-flow' w='98736' x='632' y='48360'>
+                        <zone fixed-size='627' h='25400' id='52' is-fixed='true' name='Top Stations Map' show-title='false' w='98736' x='632' y='48360'>
+                          <layout-cache minheight='201' minwidth='201' type-h='scalable' type-w='scalable' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                        <zone h='25000' id='59' name='Bar Graph Drill Down' w='98736' x='632' y='73760'>
+                          <layout-cache minheight='164' type-h='scalable' type-w='cell' />
+                          <zone-style>
+                            <format attr='border-color' value='#000000' />
+                            <format attr='border-style' value='none' />
+                            <format attr='border-width' value='0' />
+                            <format attr='margin' value='4' />
+                          </zone-style>
+                        </zone>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#271a38' fontsize='30'>Citi Bike Share System -- Trip History for 2018</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#271a38' fontsize='30'>(sample population: trips</run>
+                <run fontalignment='1' fontcolor='#271a38' fontsize='30' italic='true'> starting in Jersey City</run>
+                <run fontalignment='1' fontcolor='#271a38' fontsize='30'>)</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2800' minheight='2800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='61' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99360' id='60' param='vert' type-v2='layout-flow' w='98736' x='632' y='320'>
+                <zone h='1280' id='16' type-v2='title' w='98736' x='632' y='320'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='82' h='3600' id='26' is-fixed='true' name='Number Of Records' show-title='false' w='98736' x='632' y='1600'>
+                  <layout-cache cell-count-h='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='65' forceUpdate='true' h='3600' id='19' type-v2='text' w='98736' x='632' y='5200'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='30'>Total Trips</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='106' h='4560' id='27' is-fixed='true' name='Average Trips Per Day in 2018' w='32938' x='632' y='8800'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='106' h='4560' id='28' is-fixed='true' name='Active Stations' w='32939' x='33570' y='8800'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='106' h='4560' id='29' is-fixed='true' name='Bikes in Citi Bike fleet' w='32859' x='66509' y='8800'>
+                  <layout-cache cell-count-h='1' cell-count-w='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='1840' id='31' type-v2='text' w='98736' x='632' y='13360'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='20'>Citi Bike Demographics</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='269' h='11080' id='33' is-fixed='true' name='Gender Treemap' show-title='false' w='33412' x='632' y='15200'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='269' h='11080' id='37' is-fixed='true' name='Histogram' show-title='false' w='30569' x='34044' y='15200'>
+                  <layout-cache minheight='155' minwidth='166' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='269' h='11080' id='39' is-fixed='true' name='User Type Pie Chart' show-title='false' w='34755' x='64613' y='15200'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1840' id='41' type-v2='text' w='98736' x='632' y='26280'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='20'>Citi Bike Trips Over Time</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='18280' id='45' is-fixed='true' name='Heat Table' w='50395' x='632' y='28120'>
+                  <layout-cache cell-count-h='24' non-cell-size-h='63' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='18280' id='46' is-fixed='true' name='Line Graph' w='48340' x='51027' y='28120'>
+                  <layout-cache cell-count-w='12' minheight='188' non-cell-size-w='59' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1840' id='50' type-v2='text' w='98736' x='632' y='46520'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='20'>Citi Bike (Start) Station</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='25400' id='52' is-fixed='true' name='Top Stations Map' show-title='false' w='98736' x='632' y='48360'>
+                  <layout-cache minheight='201' minwidth='201' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='25000' id='59' is-fixed='true' name='Bar Graph Drill Down' w='98736' x='632' y='73760'>
+                  <layout-cache minheight='164' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F202356D-8CF9-4DC6-BA15-39C76F050965}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Number Of Records'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{604A6DB3-D22D-40C6-9BCE-110E05DDF76C}' />
+    </window>
+    <window class='worksheet' name='Average Trips Per Day in 2018'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{238BA2A5-94C2-423A-9FE5-BDA44A3DB020}' />
+    </window>
+    <window class='worksheet' name='Active Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{47E9EDB9-B3B9-4CA9-9B9E-19B9280D1BAC}' />
+    </window>
+    <window class='worksheet' name='Bikes in Citi Bike fleet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{C9F8C079-6FE5-4A57-8BB5-FEE1C4613500}' />
+    </window>
+    <window class='worksheet' name='Records Drill Down/ Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CC74FE07-81EC-4E9E-BAD8-F0F6DF447833}' />
+    </window>
+    <window class='worksheet' name='Histogram'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:User Age (bin):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0644D5F2-7A2C-41C6-9B1C-83F3D85B51E9}' />
+    </window>
+    <window class='worksheet' name='Gender Treemap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6579407253544095746:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C11EA865-4125-4A87-A4B4-19B922A6BE5F}' />
+    </window>
+    <window class='worksheet' name='User Type Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6036E333-4FB4-4935-B207-0FD33801D563}' />
+    </window>
+    <window class='worksheet' name='Heat Table'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{2061E0C4-CA39-4635-BDE3-247E2A974C86}' />
+    </window>
+    <window class='worksheet' name='Line Graph'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[sum:Calculation_6579407253543391232:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8FC7552A-93E7-4425-A29F-C16084D4917B}' />
+    </window>
+    <window class='worksheet' name='Top Stations Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[usr:Calculation_6579407253545340933:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{279FD96C-D5F6-47EF-9F86-56FDD7EF072E}' />
+    </window>
+    <window class='worksheet' name='Bar Graph Drill Down'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6696571212616974336:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B611F6BF-6E24-478D-A881-03EE178D142A}' />
+    </window>
+    <window class='worksheet' name='Legend for Tooltip'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1i77zov1pt47fp1f0gksh0fuvxhf].[none:Calculation_6696571212616974336:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B584E26F-C8A2-4CB2-8AE1-39B699BABE13}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Active Stations'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average Trips Per Day in 2018'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Bar Graph Drill Down'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Bikes in Citi Bike fleet'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Gender Treemap' />
+        <viewpoint name='Heat Table'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Histogram'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Line Graph'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Number Of Records'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top Stations Map'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='User Type Pie Chart'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='33' />
+      <simple-id uuid='{70481BB9-4BEA-4C40-B810-4692AA43888D}' />
+    </window>
+  </windows>
+</workbook>
