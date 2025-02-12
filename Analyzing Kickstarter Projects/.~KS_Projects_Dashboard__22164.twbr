@@ -1,0 +1,955 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='ks-projects-201801' inline='true' name='federated.1q1zbq612doyxd1ce8rlj13lzrei' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ks-projects-201801' name='textscan.1xkrdxl04dg7k21dfe6050z1rjgs'>
+            <connection class='textscan' directory='/Users/teitelbaumsair/Desktop/Open-Source-Projects/Analyzing Kickstarter Projects' filename='ks-projects-201801.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1xkrdxl04dg7k21dfe6050z1rjgs' name='ks-projects-201801.csv' table='[ks-projects-201801#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='ID' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='string' name='category' ordinal='2' />
+            <column datatype='string' name='main_category' ordinal='3' />
+            <column datatype='string' name='currency' ordinal='4' />
+            <column datatype='date' name='deadline' ordinal='5' />
+            <column datatype='real' name='goal' ordinal='6' />
+            <column datatype='date' name='launched' ordinal='7' />
+            <column datatype='real' name='pledged' ordinal='8' />
+            <column datatype='string' name='state' ordinal='9' />
+            <column datatype='integer' name='backers' ordinal='10' />
+            <column datatype='string' name='country' ordinal='11' />
+            <column datatype='real' name='usd pledged' ordinal='12' />
+            <column datatype='real' name='usd_pledged_real' ordinal='13' />
+            <column datatype='real' name='usd_goal_real' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>main_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[main_category]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>main_category</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[currency]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>currency</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deadline</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[deadline]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>deadline</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>goal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[goal]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>goal</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>launched</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[launched]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>launched</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pledged</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pledged]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>pledged</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>backers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[backers]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>backers</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usd pledged</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[usd pledged]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>usd pledged</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usd_pledged_real</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[usd_pledged_real]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>usd_pledged_real</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usd_goal_real</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[usd_goal_real]</local-name>
+            <parent-name>[ks-projects-201801.csv]</parent-name>
+            <remote-alias>usd_goal_real</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Successful Projects' datatype='integer' name='[Calculation_1559652891938041856]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [state] = &apos;successful&apos; THEN [ID] END)' />
+      </column>
+      <column caption='Success Rate' datatype='real' name='[Calculation_1559652891939454978]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(COUNTD(IF [state] = &apos;successful&apos; THEN [ID] END) / COUNTD([ID])) * 100' />
+      </column>
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Avg Success Rate' datatype='real' name='[Success Rate (copy)_1559652891940425731]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG({FIXED [category] : COUNTD(IF [state] = &apos;successful&apos; THEN [ID] END) / COUNTD([ID])})' />
+      </column>
+      <column caption='Failed Projects' datatype='integer' name='[Successful Projects (copy)_1559652891939061761]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [state] = &apos;failed&apos; THEN [ID] END)' />
+      </column>
+      <column caption='ks-projects-201801.csv' datatype='table' name='[__tableau_internal_object_id__].[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]' role='measure' type='quantitative' />
+      <column caption='Backers' datatype='integer' name='[backers]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+      <column caption='Deadline' datatype='date' name='[deadline]' role='dimension' type='ordinal' />
+      <column caption='Goal' datatype='real' name='[goal]' role='measure' type='quantitative' />
+      <column caption='Launched' datatype='date' name='[launched]' role='dimension' type='ordinal' />
+      <column caption='Main Category' datatype='string' name='[main_category]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Pledged' datatype='real' name='[pledged]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Usd Pledged' datatype='real' name='[usd pledged]' role='measure' type='quantitative' />
+      <column caption='Usd Goal Real' datatype='real' name='[usd_goal_real]' role='measure' type='quantitative' />
+      <column caption='Usd Pledged Real' datatype='real' name='[usd_pledged_real]' role='measure' type='quantitative' />
+      <column-instance column='[goal]' derivation='Sum' name='[sum:goal:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[pledged]' derivation='Sum' name='[sum:pledged:qk]' pivot='key' type='quantitative' />
+      <drill-paths>
+        <drill-path name='country, state'>
+          <field>[country]</field>
+          <field>[state]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='/var/folders/_7/7nx4t_6s6995xg_cj866wrmr0000gn/T/tableau-temp/#TableauTemp_11rb31x02tjc2q1fhf6xb1junzei.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/11/2025 01:09:10 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>378661</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>367884</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>2</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>360</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>main_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[main_category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>main_category</remote-alias>
+              <ordinal>3</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>currency</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[currency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>currency</remote-alias>
+              <ordinal>4</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>deadline</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[deadline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>deadline</remote-alias>
+              <ordinal>5</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>14275</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>goal</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[goal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>goal</remote-alias>
+              <ordinal>6</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2337</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>launched</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[launched]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>launched</remote-alias>
+              <ordinal>7</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>13719</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pledged</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pledged]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pledged</remote-alias>
+              <ordinal>8</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30379</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state</remote-alias>
+              <ordinal>9</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>backers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[backers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>backers</remote-alias>
+              <ordinal>10</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2336</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>11</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usd pledged</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[usd pledged]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usd pledged</remote-alias>
+              <ordinal>12</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39427</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usd_pledged_real</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[usd_pledged_real]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usd_pledged_real</remote-alias>
+              <ordinal>13</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>43509</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>usd_goal_real</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[usd_goal_real]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>usd_goal_real</remote-alias>
+              <ordinal>14</ordinal>
+              <family>ks-projects-201801.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1q1zbq612doyxd1ce8rlj13lzrei].[sum:goal:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1q1zbq612doyxd1ce8rlj13lzrei]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1q1zbq612doyxd1ce8rlj13lzrei].[sum:pledged:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='ks-projects-201801.csv' id='ks-projects-201801.csv_2D11DB9C475448B196FB22598F09FF61'>
+            <properties context=''>
+              <relation connection='textscan.1xkrdxl04dg7k21dfe6050z1rjgs' name='ks-projects-201801.csv' table='[ks-projects-201801#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='ID' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='string' name='category' ordinal='2' />
+                  <column datatype='string' name='main_category' ordinal='3' />
+                  <column datatype='string' name='currency' ordinal='4' />
+                  <column datatype='date' name='deadline' ordinal='5' />
+                  <column datatype='real' name='goal' ordinal='6' />
+                  <column datatype='date' name='launched' ordinal='7' />
+                  <column datatype='real' name='pledged' ordinal='8' />
+                  <column datatype='string' name='state' ordinal='9' />
+                  <column datatype='integer' name='backers' ordinal='10' />
+                  <column datatype='string' name='country' ordinal='11' />
+                  <column datatype='real' name='usd pledged' ordinal='12' />
+                  <column datatype='real' name='usd_pledged_real' ordinal='13' />
+                  <column datatype='real' name='usd_goal_real' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avg Success Rate per Category'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ks-projects-201801' name='federated.1q1zbq612doyxd1ce8rlj13lzrei' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q1zbq612doyxd1ce8rlj13lzrei'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Avg Success Rate' datatype='real' name='[Success Rate (copy)_1559652891940425731]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG({FIXED [category] : COUNTD(IF [state] = &apos;successful&apos; THEN [ID] END) / COUNTD([ID])})' />
+            </column>
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Success Rate (copy)_1559652891940425731]' derivation='User' name='[usr:Success Rate (copy)_1559652891940425731:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[none:category:nk]' direction='DESC' using='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Success Rate (copy)_1559652891940425731:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Success Rate (copy)_1559652891940425731:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Success Rate (copy)_1559652891940425731:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1q1zbq612doyxd1ce8rlj13lzrei].[none:category:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{DC7A9FEE-79F4-46AF-BD7B-F9865E30DE51}' />
+    </worksheet>
+    <worksheet name='Failed Projects'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ks-projects-201801' name='federated.1q1zbq612doyxd1ce8rlj13lzrei' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q1zbq612doyxd1ce8rlj13lzrei'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Failed Projects' datatype='integer' name='[Successful Projects (copy)_1559652891939061761]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [state] = &apos;failed&apos; THEN [ID] END)' />
+            </column>
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Successful Projects (copy)_1559652891939061761]' derivation='User' name='[usr:Successful Projects (copy)_1559652891939061761:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Successful Projects (copy)_1559652891939061761:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='11'>Failed Projects</run>
+                <run><![CDATA[
+<[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Successful Projects (copy)_1559652891939061761:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4750C17B-895D-4276-A4CD-43E259A2E063}' />
+    </worksheet>
+    <worksheet name='Overall Success Rate'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ks-projects-201801' name='federated.1q1zbq612doyxd1ce8rlj13lzrei' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q1zbq612doyxd1ce8rlj13lzrei'>
+            <column caption='Success Rate' datatype='real' name='[Calculation_1559652891939454978]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(COUNTD(IF [state] = &apos;successful&apos; THEN [ID] END) / COUNTD([ID])) * 100' />
+            </column>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_1559652891939454978]' derivation='User' name='[usr:Calculation_1559652891939454978:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Calculation_1559652891939454978:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='11'>Overall Success Rate</run>
+                <run><![CDATA[
+<[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Calculation_1559652891939454978:qk]>%]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CD61547C-E25F-4698-A624-7634AF2B548C}' />
+    </worksheet>
+    <worksheet name='Successful Projects'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ks-projects-201801' name='federated.1q1zbq612doyxd1ce8rlj13lzrei' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q1zbq612doyxd1ce8rlj13lzrei'>
+            <column caption='Successful Projects' datatype='integer' name='[Calculation_1559652891938041856]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [state] = &apos;successful&apos; THEN [ID] END)' />
+            </column>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_1559652891938041856]' derivation='User' name='[usr:Calculation_1559652891938041856:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[none:state:nk]'>
+            <groupfilter function='member' level='[none:state:nk]' member='&quot;successful&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1q1zbq612doyxd1ce8rlj13lzrei].[none:state:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Calculation_1559652891938041856:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='11'>Successful Projects</run>
+                <run><![CDATA[
+<[federated.1q1zbq612doyxd1ce8rlj13lzrei].[usr:Calculation_1559652891938041856:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FFD73965-134F-4075-A460-C75B1A8DD397}' />
+    </worksheet>
+    <worksheet name='Total Projects'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ks-projects-201801' name='federated.1q1zbq612doyxd1ce8rlj13lzrei' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q1zbq612doyxd1ce8rlj13lzrei'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column-instance column='[ID]' derivation='CountD' name='[ctd:ID:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1q1zbq612doyxd1ce8rlj13lzrei].[ctd:ID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='11'>Total Projects</run>
+                <run><![CDATA[
+<[federated.1q1zbq612doyxd1ce8rlj13lzrei].[ctd:ID:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9E2CA0FF-08D6-4DFB-BB74-38A9E0AA3F9A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Total Projects'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{690AF768-C6B0-44EC-A41C-E9EA99323EC6}' />
+    </window>
+    <window class='worksheet' name='Successful Projects'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{FE811E53-3517-4E07-86E6-E6FCBFC8CF06}' />
+    </window>
+    <window class='worksheet' name='Failed Projects'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{9D6031F8-3D23-426B-B0ED-3E697FF737C3}' />
+    </window>
+    <window class='worksheet' name='Overall Success Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B14C9767-FDA6-41D6-96DE-05E118E6EC17}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Avg Success Rate per Category'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{18784960-198A-48FD-AAF3-4B6483098E70}' />
+    </window>
+  </windows>
+</workbook>
