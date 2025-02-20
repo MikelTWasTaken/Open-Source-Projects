@@ -1,0 +1,1519 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='hubspot_report_data' inline='true' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='hubspot_report_data' name='textscan.0o1jslc0fgc3os13pmppx1ch6c9x'>
+            <connection class='textscan' directory='/Users/teitelbaumsair/Desktop/Open-Source-Projects/Connecteam BOM Assignment' filename='hubspot_report_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0o1jslc0fgc3os13pmppx1ch6c9x' name='hubspot_report_data.csv' table='[hubspot_report_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='Company ID' ordinal='0' />
+            <column datatype='string' name='Email' ordinal='1' />
+            <column datatype='string' name='First Name' ordinal='2' />
+            <column datatype='string' name='Last Name' ordinal='3' />
+            <column datatype='string' name='Job Title' ordinal='4' />
+            <column datatype='string' name='Industry' ordinal='5' />
+            <column datatype='string' name='Product Interest' ordinal='6' />
+            <column datatype='string' name='Country' ordinal='7' />
+            <column datatype='string' name='Region' ordinal='8' />
+            <column datatype='string' name='Lead Source' ordinal='9' />
+            <column datatype='string' name='Lead Sub Source' ordinal='10' />
+            <column datatype='string' name='Device Type' ordinal='11' />
+            <column datatype='integer' name='Number of Employees' ordinal='12' />
+            <column datatype='date' name='Signup Date' ordinal='13' />
+            <column datatype='date' name='Became a MQL Date' ordinal='14' />
+            <column datatype='date' name='First Demo Date' ordinal='15' />
+            <column datatype='date' name='Became a Customer Date' ordinal='16' />
+            <column datatype='real' name='Annual Revenue' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Company ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Company ID]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Company ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Email</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Email]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Email</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>First Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[First Name]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>First Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Last Name]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Last Name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Title]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Job Title</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Industry]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Industry</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Interest</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product Interest]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Product Interest</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lead Source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lead Source]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Lead Source</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lead Sub Source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lead Sub Source]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Lead Sub Source</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Device Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Device Type]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Device Type</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Employees</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Employees]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Number of Employees</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Signup Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Signup Date]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Signup Date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Became a MQL Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Became a MQL Date]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Became a MQL Date</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>First Demo Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[First Demo Date]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>First Demo Date</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Became a Customer Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Became a Customer Date]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Became a Customer Date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Annual Revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Annual Revenue]</local-name>
+            <parent-name>[hubspot_report_data.csv]</parent-name>
+            <remote-alias>Annual Revenue</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='MQL Rate' datatype='real' name='[Calculation_6420444267933765633]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF NOT ISNULL([Became a MQL Date]) THEN [Company ID] END) &#10;/ COUNTD([Company ID])' />
+      </column>
+      <column caption='Demo Rate (MQL → First Demo)' datatype='real' name='[Calculation_6420444267934392322]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF NOT ISNULL([First Demo Date]) THEN [Company ID] END) &#10;/ COUNTD(IF NOT ISNULL([Became a MQL Date]) THEN [Company ID] END)' />
+      </column>
+      <column caption='Close Rate (Demo → Customer)' datatype='real' name='[Calculation_6420444267934474243]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF NOT ISNULL([Became a Customer Date]) THEN [Company ID] END) &#10;/ COUNTD(IF NOT ISNULL([First Demo Date]) THEN [Company ID] END)' />
+      </column>
+      <column caption='Conversion Rate by Source' datatype='real' name='[Calculation_6420444267935088644]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF NOT ISNULL([Became a Customer Date]) THEN [Company ID] END) &#10;/ COUNTD([Company ID])' />
+      </column>
+      <column caption='Revenue per Industry' datatype='real' name='[Calculation_6420444267936468998]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Annual Revenue]) / COUNTD([Company ID])' />
+      </column>
+      <column datatype='integer' name='[Company ID]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Region]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='hubspot_report_data.csv' datatype='table' name='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='/var/folders/_7/7nx4t_6s6995xg_cj866wrmr0000gn/T/tableau-temp/#TableauTemp_1ml5eim0dkem0i16q9iq00px9fdw.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/20/2025 12:16:36 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Company ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Company ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Company ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Email</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Email]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Email</remote-alias>
+              <ordinal>1</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>First Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[First Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>First Name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>370</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Last Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Last Name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>497</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Job Title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Job Title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Job Title</remote-alias>
+              <ordinal>4</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>544</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Industry</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Industry]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Industry</remote-alias>
+              <ordinal>5</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Interest</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Interest]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product Interest</remote-alias>
+              <ordinal>6</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>7</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>80</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>8</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lead Source</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Lead Source]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lead Source</remote-alias>
+              <ordinal>9</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lead Sub Source</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Lead Sub Source]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lead Sub Source</remote-alias>
+              <ordinal>10</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Device Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Device Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Device Type</remote-alias>
+              <ordinal>11</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Employees</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Number of Employees]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Employees</remote-alias>
+              <ordinal>12</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Signup Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Signup Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Signup Date</remote-alias>
+              <ordinal>13</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Became a MQL Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Became a MQL Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Became a MQL Date</remote-alias>
+              <ordinal>14</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>First Demo Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[First Demo Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>First Demo Date</remote-alias>
+              <ordinal>15</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Became a Customer Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Became a Customer Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Became a Customer Date</remote-alias>
+              <ordinal>16</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Annual Revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Annual Revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Annual Revenue</remote-alias>
+              <ordinal>17</ordinal>
+              <family>hubspot_report_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='hubspot_report_data.csv' id='hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B'>
+            <properties context=''>
+              <relation connection='textscan.0o1jslc0fgc3os13pmppx1ch6c9x' name='hubspot_report_data.csv' table='[hubspot_report_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='Company ID' ordinal='0' />
+                  <column datatype='string' name='Email' ordinal='1' />
+                  <column datatype='string' name='First Name' ordinal='2' />
+                  <column datatype='string' name='Last Name' ordinal='3' />
+                  <column datatype='string' name='Job Title' ordinal='4' />
+                  <column datatype='string' name='Industry' ordinal='5' />
+                  <column datatype='string' name='Product Interest' ordinal='6' />
+                  <column datatype='string' name='Country' ordinal='7' />
+                  <column datatype='string' name='Region' ordinal='8' />
+                  <column datatype='string' name='Lead Source' ordinal='9' />
+                  <column datatype='string' name='Lead Sub Source' ordinal='10' />
+                  <column datatype='string' name='Device Type' ordinal='11' />
+                  <column datatype='integer' name='Number of Employees' ordinal='12' />
+                  <column datatype='date' name='Signup Date' ordinal='13' />
+                  <column datatype='date' name='Became a MQL Date' ordinal='14' />
+                  <column datatype='date' name='First Demo Date' ordinal='15' />
+                  <column datatype='date' name='Became a Customer Date' ordinal='16' />
+                  <column datatype='real' name='Annual Revenue' ordinal='17' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Closed Won Count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='real' name='[Annual Revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Annual Revenue]' derivation='Count' name='[cnt:Annual Revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[cnt:Annual Revenue:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='12'>Closed Won</run>
+                <run>Æ&#10;</run>
+                <run fontsize='12'><![CDATA[<[federated.1jgihs91ra7y7n1gilew20vfjuzj].[cnt:Annual Revenue:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3CF60AFE-911A-4384-8A21-21AAFFE05402}' />
+    </worksheet>
+    <worksheet name='Conversion Rate by Lead Source'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='date' name='[Became a Customer Date]' role='dimension' type='ordinal' />
+            <column caption='Conversion Rate by Source' datatype='real' name='[Calculation_6420444267935088644]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF NOT ISNULL([Became a Customer Date]) THEN [Company ID] END) &#10;/ COUNTD([Company ID])' />
+            </column>
+            <column datatype='integer' name='[Company ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Lead Source]' role='dimension' type='nominal' />
+            <column-instance column='[Lead Source]' derivation='None' name='[none:Lead Source:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_6420444267935088644]' derivation='User' name='[usr:Calculation_6420444267935088644:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Lead Source:nk]' />
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[usr:Calculation_6420444267935088644:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[usr:Calculation_6420444267935088644:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{B61D2F33-417C-40C2-9FE0-67CFE552167B}' />
+    </worksheet>
+    <worksheet name='Customer &amp; Revenue Insights by Employee Size'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CE4C51C8-EDC2-446A-8ED1-66F9C97C1F17}' />
+    </worksheet>
+    <worksheet name='Customer &amp; Revenue Insights by Industry '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='real' name='[Annual Revenue]' role='measure' type='quantitative' />
+            <column caption='Revenue per Industry' datatype='real' name='[Calculation_6420444267936468998]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Annual Revenue]) / COUNTD([Company ID])' />
+            </column>
+            <column datatype='integer' name='[Company ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Industry]' role='dimension' type='nominal' />
+            <column-instance column='[Industry]' derivation='None' name='[none:Industry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_6420444267936468998]' derivation='User' name='[usr:Calculation_6420444267936468998:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Industry:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Industry:nk]' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Industry:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[usr:Calculation_6420444267936468998:qk]' />
+              <color column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[usr:Calculation_6420444267936468998:qk]' />
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Industry:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2D4D4615-C911-419A-81A1-AA165BE65FDD}' />
+    </worksheet>
+    <worksheet name='Demo&apos;s Booked'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='date' name='[First Demo Date]' role='dimension' type='ordinal' />
+            <column-instance column='[First Demo Date]' derivation='Count' name='[cnt:First Demo Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[cnt:First Demo Date:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='12'>Demo&apos;s Booked</run>
+                <run>Æ&#10;</run>
+                <run fontsize='12'><![CDATA[<[federated.1jgihs91ra7y7n1gilew20vfjuzj].[cnt:First Demo Date:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{92D7BB71-A930-4ACA-9230-5F2C0F4F6217}' />
+    </worksheet>
+    <worksheet name='Lead Count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column-instance column='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' pivot='key' type='quantitative' />
+            <column caption='hubspot_report_data.csv' datatype='table' name='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='12'>Number of Leads</run>
+                <run>Æ&#10;</run>
+                <run fontsize='12'><![CDATA[<[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{32B05B1D-D2EF-40AA-AB1A-415C35C534F9}' />
+    </worksheet>
+    <worksheet name='Lead Source Distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='string' name='[Lead Source]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Lead Sub Source]' role='dimension' type='nominal' />
+            <column-instance column='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' pivot='key' type='quantitative' />
+            <column caption='hubspot_report_data.csv' datatype='table' name='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' role='measure' type='quantitative' />
+            <column-instance column='[Lead Source]' derivation='None' name='[none:Lead Source:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Lead Sub Source]' derivation='None' name='[none:Lead Sub Source:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Lead Source:nk]' />
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]' direction='DESC' using='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+          <filter class='categorical' column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Sub Source:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-Bingpaid&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-Bingpaid_brand&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-businesscom&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-capterra.com&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-google&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-google_brand&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-google_il&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-google_pmax&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-mvf&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-pmp&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-saasworthy&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-sourceforge&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-TechnologyAdvice&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;cpc-TikTok&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;direct&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;email&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;influencers&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;insite&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;mobile&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;organic&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;partnerships-marketingpartners&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;partnerships-partnerstack&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;referral&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;social&quot;' />
+              <groupfilter function='member' level='[none:Lead Sub Source:nk]' member='&quot;uncategorized&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]</column>
+            <column>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Sub Source:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]</rows>
+        <cols>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]</cols>
+      </table>
+      <simple-id uuid='{2B489EF4-8495-484F-A392-BD8E423F7AEC}' />
+    </worksheet>
+    <worksheet name='Leads by Country'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' pivot='key' type='quantitative' />
+            <column caption='hubspot_report_data.csv' datatype='table' name='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[Longitude (generated)]' field-type='quantitative' max='20793448.894382939' min='-14160858.815242752' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[Latitude (generated)]' field-type='quantitative' max='14839155.508247085' min='-10596521.09295444' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+              <lod column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.2413811683654785' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[Latitude (generated)]</rows>
+        <cols>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{C97440DB-DCFA-4AD0-85D5-5D61EC6DAE1F}' />
+    </worksheet>
+    <worksheet name='Leads by Industry'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='string' name='[Industry]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Lead Source]' role='dimension' type='nominal' />
+            <column-instance column='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' pivot='key' type='quantitative' />
+            <column caption='hubspot_report_data.csv' datatype='table' name='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' role='measure' type='quantitative' />
+            <column-instance column='[Industry]' derivation='None' name='[none:Industry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Lead Source]' derivation='None' name='[none:Lead Source:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Industry:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Industry:nk]' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Industry:nk]' direction='DESC' using='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+          <filter class='categorical' column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='&quot;Direct Traffic&quot;' />
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='&quot;Email&quot;' />
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='&quot;Organic Traffic&quot;' />
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='&quot;Paid Search&quot;' />
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='&quot;Referral &amp; Partnerships&quot;' />
+              <groupfilter function='member' level='[none:Lead Source:nk]' member='&quot;Unknown&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Industry:nk]</column>
+            <column>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]</rows>
+        <cols>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Industry:nk]</cols>
+      </table>
+      <simple-id uuid='{0F424771-063E-4AA8-A31C-0C87C1AEA1E2}' />
+    </worksheet>
+    <worksheet name='MQL Conversion'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='date' name='[Became a MQL Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Became a MQL Date]' derivation='Count' name='[cnt:Became a MQL Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[cnt:Became a MQL Date:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='12'>MQL Conversion</run>
+                <run>Æ&#10;</run>
+                <run fontsize='12'><![CDATA[<[federated.1jgihs91ra7y7n1gilew20vfjuzj].[cnt:Became a MQL Date:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{56F88944-BBFF-4FA6-9F30-BFC6B19D24E2}' />
+    </worksheet>
+    <worksheet name='Product Interest'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='hubspot_report_data' name='federated.1jgihs91ra7y7n1gilew20vfjuzj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1jgihs91ra7y7n1gilew20vfjuzj'>
+            <column datatype='string' name='[Product Interest]' role='dimension' type='nominal' />
+            <column-instance column='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' pivot='key' type='quantitative' />
+            <column caption='hubspot_report_data.csv' datatype='table' name='[__tableau_internal_object_id__].[hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B]' role='measure' type='quantitative' />
+            <column-instance column='[Product Interest]' derivation='None' name='[none:Product Interest:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Product Interest:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Product Interest:nk]' />
+              <groupfilter function='member' level='[none:Product Interest:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Product Interest:nk]' direction='DESC' using='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+          <slices>
+            <column>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Product Interest:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Product Interest:nk]' value='100' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[__tableau_internal_object_id__].[cnt:hubspot_report_data.csv_2DCA2D21708F4643AE8D6E72C45B9D5B:qk]</rows>
+        <cols>[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Product Interest:nk]</cols>
+      </table>
+      <simple-id uuid='{D857D5C9-EC9A-4E5B-A1A6-950DC86952C5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Lead Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{E30B2B9B-BF0C-4E4F-B40D-A437317B91B8}' />
+    </window>
+    <window class='worksheet' name='MQL Conversion'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{725A6A81-B466-4D9E-8E5D-E22D0B45C7DC}' />
+    </window>
+    <window class='worksheet' name='Demo&apos;s Booked'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{CD2C942C-69BB-4709-BFD2-AC35FBC98A5D}' />
+    </window>
+    <window class='worksheet' name='Closed Won Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A14B4A62-7A77-4F25-AC81-F33A6E68F1EF}' />
+    </window>
+    <window class='worksheet' name='Product Interest'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{AA768A34-6903-401E-ADBE-998BA9E52EA9}' />
+    </window>
+    <window class='worksheet' name='Lead Source Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Sub Source:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0EA36BE4-BBD7-4C06-A909-D13F161A5D18}' />
+    </window>
+    <window class='worksheet' name='Leads by Industry'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[none:Lead Source:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{342B5525-1009-48D1-8C23-DECA1D36A5E4}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Leads by Country'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{30DDC2B6-AB23-4BB1-AB81-088BD049030E}' />
+    </window>
+    <window class='worksheet' name='Conversion Rate by Lead Source'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BBF7653F-0135-4736-A2E3-0C897D8D1AAF}' />
+    </window>
+    <window class='worksheet' name='Customer &amp; Revenue Insights by Industry '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1jgihs91ra7y7n1gilew20vfjuzj].[usr:Calculation_6420444267936468998:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{80E8ED20-FC2F-4FE5-903C-3B760ED9C987}' />
+    </window>
+    <window class='worksheet' name='Customer &amp; Revenue Insights by Employee Size'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BBDDD464-73E5-494F-943E-0913926C0130}' />
+    </window>
+  </windows>
+</workbook>
