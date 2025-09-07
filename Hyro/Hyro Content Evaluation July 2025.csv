@@ -1,0 +1,2427 @@
+﻿CONVERSATION_ID,Conversation Dialogue,Primary Issue Category,Primary Failure Signal,Secondary Issue Category,Secondary Failure Signal,Criticality,Notes
+f50efaec-2a71-4856-955d-0b7e569765f6,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: 12
+User: No.
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Cancel an appointment, Schedule a lab appointment, Schedule a new appointment or Hear your appointment details. Which of those are you looking for?
+User: New appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: General.
+Bot: Got it. I can schedule a Video Visit, an Office Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Physical.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: The earliest available appointment is [DATE] afternoon, on [DATE], does this work?
+User: No.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Thank you.
+",Conversation-Level Red Flags,Conversation ends without resolution,Conversation-Level Red Flags,Escalation after success,Critical blocker,"No Appointment was scheduled when the suggested time didn't work for the user, the bot escalate immediately without explanation"
+cc89ccfc-7bef-428c-8256-dcca4fddfa59,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Hear your appointment details, Cancel an appointment, Reschedule an appointment, Schedule a lab appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Diabetic screening.
+Bot: Got it. I can schedule an Office Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+Bot: I didn't quite hear you, can you say it again?",Conversation-Level Red Flags,Conversation ends without resolution,,,Unwanted Friction,"The user does not answer, and there is no followup from the bot."
+086b53be-f7c4-41ab-8925-7d99d2916e85,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Cancel an appointment, Schedule a new appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: New appointment.
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,"After providing the verification, the user is transferred without explanation."
+7a069e20-cce4-4287-9ee8-2f26d1343b61,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: To get an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Immunization.
+Bot: To confirm, you are looking to Schedule an immunization. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: I have a 6 month immunization for osteoporosis.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Osteoporosis.
+User: Immunization.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Thank you.
+",NLU (Understanding) Failures,Menu loops,Conversation-Level Red Flags,Escalation after success,Critical blocker,
+e5a53d3c-871e-4afc-9604-4cad0ce3cc3c,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Hear your appointment details, Cancel an appointment, Schedule a lab appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: It seems that identification with the date of birth [DATE] has failed. Could you please confirm the date of birth is correct or provide a new one?
+User: [DATE_OF_BIRTH]
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: It's for a new patient.
+User: 70657036
+User: Apartment 0674.
+Bot: I need a clear yes or no to continue.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: Please hold while I verify the details.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: [FIRST_NAME] do you have your phone with you?
+Bot: I need a clear yes or no to continue.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: If not you gotta go get it.
+User: Yes.
+User: Yes.
+Bot: I understand.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Verification loop,Conversation-Level Red Flags,Escalation after success,Critical blocker,Over verification and abrupt escalation when there are complex or unclear answers from the user.
+ed06c0ba-8f54-44b0-80a9-e8c9661381a0,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: No.
+User: Appointment.
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Hear your appointment details, Schedule a new appointment, Cancel an appointment or Schedule a lab appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: I didn't quite hear you, can you say it again?
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Maybe.
+User: An appointment.
+User: Yeah.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,UX / Flow Failures,Verification loop,,Verification and then escalation with no explanation
+d9dc45f2-ecdc-4013-b963-b2138b710397,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Ointment.
+Bot: To confirm, you are looking to Get assistance with your prescriptions. Is that correct?
+User: No.
+Bot: Let's try once more.
+Bot: What are you calling about [DATE]?
+User: Book an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Need to speak to the office.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Need to speak to representative.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Keyword mismatch,Coverage Gaps,Unsupported appointment type,Critical blocker,"User wants to clarify details with the office, but there are no menu options that clearly support this need/ was not understood from the beginning. "
+27e2237a-3bbe-4d38-a577-6fe080e1dda4,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointments.
+User: Travel Medicine Consult.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Schedule a new appointment or Schedule a lab appointment. Which of those are you looking for?
+User: No.
+User: Appointments.
+User: Schedule a new appointment.
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,User repeats themselves multiple times,Software / Technical Failures,Slot availability crash,Critical blocker,"The user has complications scheduling an appointment, after verifying the details, the user is transferred immedately without any options provided for scheduling."
+6d8ccd33-02c4-48d8-ac38-f6ead57d3c2b,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment 9
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Hear your appointment details or Cancel an appointment. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: I'll send a 4-digit code to the patient's phone to confirm their identity. Please read it back or enter it when you're ready, is that ok?
+User: Yes.
+Bot: Thank you. The code may take a few moments to arrive. Once you get it, please enter or read it back to me.
+User: No.
+Bot: I may have misheard you. Can you please enter or repeat the code?
+User: There is no code.
+Bot: I wasn't able to verify your code.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Oh my god.
+",NLU (Understanding) Failures,Yes/No misinterpretation,Conversation-Level Red Flags,Escalation after success,Critical blocker,The bot did not understand that no code had been sent to the provided phone number.
+f02395e7-03a8-40de-8555-e8ca8d9061f0,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Schedule a lab appointment, Schedule a new appointment or Reschedule an appointment. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+User: 10211959
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,,,,Immediate transfer after verification of patient details
+4d6d6877-dbd8-42bc-9d99-cae102ae2cd5,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Five.
+User: To make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: In exchange
+User: Yep.
+User: An exam with the doctor.
+Bot: What are you calling about [DATE]?
+User: Investigation.
+User: I have to come in for a checkup with doctor [LAST_NAME].
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+User: [ZIPCODE]
+Bot: I didn’t quite catch that.
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+",NLU (Understanding) Failures,Repeated clarification prompts,Software / Technical Failures,Verification loop,Critical blocker,Bot asks for Zip code multiple times.
+01a61cbf-6050-4873-aecd-c42fafab5686,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: New patient appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+06419bd5-a437-4356-8afd-314fee29608b,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: New patient appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Primary care.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [PERSON_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+734e734f-1c36-4410-a963-1bfea8eb15a2,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Set an appointment with doctor [FIRST_NAME][PERSON_NAME][LAST_NAME] please.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: An appointment
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: for doctor [FIRST_NAME][PERSON_NAME][LAST_NAME].
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+725a28f6-28d5-4f9e-b95b-1756e66b489f,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Schedule an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+193abfbf-b757-40a1-bbf6-7121b16c07f6,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello. I have a
+User: Schedule an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: White headedness. Would like to see doctor [FIRST_NAME][PERSON_NAME][LAST_NAME].
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: An annual checkup.
+Bot: Got it. I can schedule an Office Visit, a Physical, or a Video Visit with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Office visit.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: I can schedule your appointment for either [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE], which do you prefer?
+",Conversation-Level Red Flags,Conversation ends without resolution,,,Minor ,No further inquiry from the chatbot or followup.
+ab97c800-6932-4709-adec-c89dd022b148,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Schedule a new appointment, Cancel an appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Thank you.
+",Conversation-Level Red Flags,Escalation after success,,,Critical blocker,Broken escalation process
+8ddad66a-bbcf-4bf7-8bde-2fa0d64da720,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello?
+User: Scheduling a mammogram.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment. Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+User: 02021980
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Thank you.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+d5a1608e-6edb-4e14-bad9-a783fc25a697,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointments.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Hear your appointment details, Schedule a new appointment, Reschedule an appointment or Cancel an appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+edc2a898-8611-4e2f-aeab-502cbc75402e,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello.
+User: I'm calling to make an appointment with [FIRST_NAME][PERSON_NAME][LAST_NAME].
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: I don't know. I've never met her so I don't know. Don't thing I know that I I'm calling to make an appointment to find out.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes. That's right.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Okay.
+User: Okay.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+0b0da178-ac0a-4b98-bfba-deee80ff1067,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Schedule a lab appointment, Hear your appointment details, Cancel an appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Chest x-ray and CT scan.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Piedmont perimeter only. Chest x-ray and CT scan.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Complex phrasing ignored,Conversation-Level Red Flags,Escalation after success,Critical blocker,Important info verified but the process hasn't been processed completely and no appointments were proposed.
+6d43eda9-510a-4840-9340-aff4d3823eab,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello?
+User: Make appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+Bot: I didn't quite hear you, can you say it again?
+User: Schedule appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+e4a5a405-3132-4087-afca-078d01b8fc63,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make appointment with doctor [PERSON_NAME].
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+Bot: I didn't quite hear you, can you say it again?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you Donna. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Olive appointment.
+User: After being in the hospital.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Auto up appointment for being in the hospital.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Complex phrasing ignored,Software / Technical Failures,Slot availability crash,Critical blocker,
+8f4d3323-04e9-4f75-8c7c-d5651b348fd0,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: To make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Stomach problems.
+Bot: Got it. I can schedule a Physical, a Video Visit, or an Office Visit with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Office visit.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: The earliest available appointment is either [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE], which do you prefer?
+User: Neither one. I need a sooner appointment.
+Bot: Sorry, I don't have anything earlier than [DATE].
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: I need an earlier appointment.
+Bot: Sorry, I don't have anything earlier than [DATE].
+Bot: The earliest available appointment is either [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE], which do you prefer?
+User: Speak to a representative.
+User: Speak to a representative.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Menu loops,Conversation-Level Red Flags,Bot repeats phrases word-for-word,Unwanted Friction,This could also indicate a UX problem with rigid menu options. Offering an alternative doctor with an earlier appointment may be a viable option. 
+b9a54d62-3124-4bf2-a1f0-fef03a77d7e3,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Schedule an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Cajunno siesta.
+Bot: What are you calling about [DATE]?
+User: Schedule and physical.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,"Immediate transfer after verification of patient details, additional language detection miss when the user speaks spanish."
+1e5b1958-42e3-4368-94bf-68c0884e3377,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: A doctor's appointment.
+Bot: OK, it sounds like you'd like to Schedule a new appointment, Cancel an appointment, Schedule a lab appointment, Reschedule an appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: I need someone to look at my thyroid.
+Bot: Got it. I can schedule an Office Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Office visit.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: The earliest available appointment is either [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE], which do you prefer?
+User: Not available.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No ma'am. Did y'all have one for [DATE]?
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No ma'am.
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No ma'am.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Repeated clarification prompts,NLU (Understanding) Failures,Yes/No misinterpretation,Unwanted Friction,"""No Ma'am"" seems to confuse the bot."
+7412f370-27d1-4007-b04d-1e128009c038,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointments. Nothing baby.
+User: Appointments.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Cancel an appointment, Hear your appointment details, Schedule a lab appointment or Schedule a new appointment. Which of those are you looking for?
+User: New appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+1977a2b9-c819-4089-b550-45de4fbce21b,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Reschedule an appointment, Schedule a lab appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Thank you.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,"Immediate transfer after verification of patient details, Additional Tone mismatch when the user says thank you and the bot does not respond."
+d961406d-dc6c-4825-8f6d-f92a41c9c983,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Hear your appointment details, Schedule a new appointment or Cancel an appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+c97c1128-800a-4956-b59c-dada3297b4c6,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Scheduling.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule a doctor's appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: I want to.
+User: Reschedule an appointment.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Oh man.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+30556b0d-fd5c-4562-8a38-38cc8065e838,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+Bot: I didn't quite hear you, can you say it again?
+User: Ones.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: No.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Repeated clarification prompts,NLU (Understanding) Failures,Yes/No misinterpretation,Unwanted Friction,
+fc9ff79e-a2a4-46c6-ae72-0835ddf89294,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Need to make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: An appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: I'm allergic to something.
+Bot: Got it. I can schedule a Physical, a Video Visit, or an Office Visit with [PERSON_NAME][FIRST_NAME][LAST_NAME]. Which do you need?
+User: Office visit.
+Bot: No problem, let me check Islam G. Eltarawy's availability for you.
+Bot: I can schedule your appointment for either this [DATE] afternoon or [DATE] morning, on [DATE], which do you prefer?
+User: [DATE].
+Bot: I couldn't find any availability for the requested time, but here are the closest dates I have.
+Bot: What about this [DATE] afternoon or this [DATE] afternoon?
+User: Have to call back.
+Bot: I didn’t quite catch that.
+Bot: What about this [DATE] afternoon or this [DATE] afternoon?
+User: Need something [DATE].
+Bot: I couldn't find any availability for the requested time, but here are the closest dates I have.
+Bot: What about this [DATE] afternoon or [DATE] afternoon, on [DATE]?
+User: Have to call back because I I need [DATE].
+Bot: I couldn't find any availability for the requested time, but here are the closest dates I have.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+",Conversation-Level Red Flags,Conversation ends without resolution,NLU (Understanding) Failures,Complex phrasing ignored,Minor ,
+499b61e5-3b79-49a9-a232-eaeb55123559,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment for new patient.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+305081cb-57cf-46ed-be08-63eea79046bb,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Schedule a new appointment, Schedule a lab appointment or Reschedule an appointment. Which of those are you looking for?
+User: New appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Yes.
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+3e3a2a4a-a4b5-4336-9224-c746bbbb027b,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a new appointment, Cancel an appointment, Hear your appointment details, Reschedule an appointment or Schedule a lab appointment. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+9735c640-b4d3-4d22-a1fb-8b9732d1f543,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a new appointment, Schedule a lab appointment, Cancel an appointment, Hear your appointment details or Reschedule an appointment. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you Tocmeika. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+645ae7c1-5641-4d7d-bc2f-8b79fd94cab0,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Making an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: An appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+19bdba21-3ce8-42b3-90ae-3aa802468db1,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: An appointment with the doctor.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+6bdb9ad9-aca7-441a-b0e9-b617f9b595c5,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Schedule a new appointment, Reschedule an appointment, Hear your appointment details or Schedule a lab appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+c6013a52-f625-4558-a587-56ec660dd3fc,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: I need to make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: A wellness.
+User: Appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+ee2a6b87-d5d8-4fc0-9755-62a464b82eba,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Point
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Hear your appointment details, Cancel an appointment or Schedule a new appointment. Which of those are you looking for?
+User: That's a new
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Get some new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+10eef01d-bdc1-47cd-b2ec-89fc5221f6d8,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: An appointment
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Hear your appointment details, Cancel an appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you Roahna. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+614f4b76-1b06-43c1-a3dc-58beef02c752,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Schedule follow-up appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: 4046216545.
+Bot: I need a clear yes or no to continue.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+User: 6216545.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: No.
+Bot: I understand.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Error handoff,NLU (Understanding) Failures,Complex phrasing ignored,Unwanted Friction,"If the user provides the phone number the AI should understand and move to next steps, then transfers in the middle of technical process."
+b4b24b94-86a8-452e-af6a-66e117df4bd3,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Hear your appointment details, Schedule a new appointment, Cancel an appointment, Reschedule an appointment or Schedule a lab appointment. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+54611adf-f78a-4466-b339-6aade71edaee,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Schedule a new appointment, Schedule a lab appointment or Reschedule an appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Correct.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+2acfd4be-c39e-4683-b324-d3e148245b0d,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: A point. Appointment.
+User: Appointment.
+Bot: OK, it sounds like you'd like to Hear your appointment details, Cancel an appointment, Reschedule an appointment, Schedule a lab appointment or Schedule a new appointment. Which of those are you looking for?
+User: Ointments.
+User: New appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: New appointment.
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: No.
+Bot: I understand.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: You have to eat breakfast first.
+User: You're gonna have a bellyache. K?
+",NLU (Understanding) Failures,Menu loops,,,,
+6dcc2649-ffb9-45a6-8dd1-cb327a5e1533,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make employment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Doctor's appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [LAST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+User: Hello?
+Bot: What's the reason of your appointment?
+User: Medication refill.
+Bot: Got it. I can schedule a Video Visit, a Physical, or an Office Visit with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Schedule with [FIRST_NAME][PERSON_NAME][LAST_NAME].
+Bot: I didn't quite catch that. I can schedule a Video Visit, a Physical, or an Office Visit with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: I need to schedule an appointment with [FIRST_NAME][PERSON_NAME][LAST_NAME].
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",UX / Flow Failures,Rigid option menus,,,Unwanted Friction,User wants to refill medication and is sent to appointment scheduling menu.
+cfabebed-da05-45c9-949c-f317c950b398,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: They make an appointment
+User: Without aleph.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: That's
+User: A doctor's appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: That's right.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: I didn’t quite catch that.
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Thank you.
+",NLU (Understanding) Failures,Repeated clarification prompts,NLU (Understanding) Failures,Menu loops,Unwanted Friction,
+75d6293c-cdf3-4045-a4ad-cd9b4fc47924,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Hear your appointment details, Reschedule an appointment, Schedule a new appointment or Cancel an appointment. Which of those are you looking for?
+User: No.
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: It won't.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: I have an open wound on my leg.
+Bot: Got it. I can schedule an Office Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: It's music.
+Bot: I didn't quite catch that. I can schedule an Office Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Office busy.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: I can schedule your appointment for either this [DATE] morning or [DATE] afternoon, on [DATE], which do you prefer?
+User: Next provider.
+Bot: I didn’t quite catch that.
+Bot: I can schedule your appointment for either this [DATE] morning or [DATE] afternoon, on [DATE], which do you prefer?
+User: Representative.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Repeated clarification prompts,Conversation-Level Red Flags,User repeats themselves multiple times,,
+3625803a-a90a-4051-b63c-a454dccc92e1,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Schedule a new appointment, Schedule a lab appointment or Reschedule an appointment. Which of those are you looking for?
+User: Schedule appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: [LAST_NAME].
+Bot: I need a clear yes or no to continue.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Well I wanna get a medical clearance for dentures.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Well I'm gonna be seeing doctor [LAST_NAME] [DATE].
+User: At 3:15.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Open.
+User: Alright.
+",Conversation-Level Red Flags,User repeats themselves multiple times,NLU (Understanding) Failures,Complex phrasing ignored,Unwanted Friction,
+24d91a9c-8bd6-4083-a268-8dba6c0b328a,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: I
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Schedule a lab appointment, Reschedule an appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule an appointment.
+User: Schedule.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+b55b4141-042f-4640-a5cf-e9b976f5acbb,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a new appointment, Schedule a lab appointment, Hear your appointment details, Reschedule an appointment or Cancel an appointment. Which of those are you looking for?
+User: To schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: I didn't quite hear you, can you say it again?
+User: [ZIPCODE]
+Bot: Thank you London. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+c312d46c-bcd9-4158-afee-69be6c20af69,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Cancel an appointment, Hear your appointment details or Schedule a new appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+7ca8ea15-5798-4a03-a844-eb25f7353050,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: For appointments.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Reschedule an appointment, Schedule a lab appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule our new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Correct.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: No. Representative.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Keyword mismatch,,,,
+1159d4fa-1481-41a9-aa07-d0ae0c16b1df,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: It An appointment doctor's appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+711eac4a-43cf-4646-b3e8-4ad17c89847f,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Schedule an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: A live appointment.
+User: A lab appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: See my doc talk to my doctor.
+Bot: Got it. I can schedule a Physical, a Video Visit, or an Office Visit with [FIRST_NAME] Ynecyonte [LAST_NAME]. Which do you need?
+User: Office visit.
+Bot: No problem, let me check [FIRST_NAME] Ynecyonte [LAST_NAME] availability for you.
+Bot: I can schedule your appointment for either this  morning or  afternoon, which do you prefer?
+User: I wanna speak to her now.
+Bot: [DATE][DATE], there are available time slots at 11:00 AM or 2:45 PM, which of those works for you?
+User: Need a
+User: Can I speak to her receptionist please?
+Bot: I didn’t quite catch that.
+Bot: [DATE][DATE], there are available time slots at 11:00 AM or 2:45 PM, which of those works for you?
+User: Speak to speak to the doctor.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,Conversation ends without resolution,NLU (Understanding) Failures,Repeated clarification prompts,Critical blocker,
+a9db08a6-8034-4cd1-8dac-ac65513a809f,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Scantilling an appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment or Reschedule an appointment. Which of those are you looking for?
+User: Schedule appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: No.
+Bot: I understand.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,Escalation after success,,,Minor ,
+dc4c5809-eb71-45d9-ac1f-8ea80fddcee2,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: I'd like to make a doctor's appointment please.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: I didn’t quite catch that.
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Repeated verification steps and direct transfer after verification
+f7787250-f202-43cd-80fd-c2412cdd8a08,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Wait a minute.
+User: Schedule an appointment.
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you Summer. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Severe abdominal pain.
+Bot: Got it. I can schedule an Office Visit, a Video Visit, or a Physical with Islam [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Live person.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Repeated clarification prompts,Conversation-Level Red Flags,User repeats themselves multiple times,Unwanted Friction,
+fb60cfa8-2b99-4b14-95be-9e8fe7b600a4,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Schedule a new appointment, Schedule a lab appointment, Cancel an appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+User: 1948.
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+652518dd-d06a-4d58-9571-e2754e5bbaf3,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello.
+User: Self appointment.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Schedule a lab appointment, Schedule a new appointment, Cancel an appointment or Hear your appointment details. Which of those are you looking for?
+User: New appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: New appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you Deshaundria. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+e9884ce1-807a-496f-ad78-7d9a78d787fb,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Hear your appointment details, Schedule a new appointment or Cancel an appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: Yes.
+Bot: Thank you. The code may take a few moments to arrive. Once you get it, please enter or read it back to me.
+Bot: I didn't quite hear you, can you say it again?
+User: Three five nine four.
+Bot: Thank you . I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,Escalation after success,,,Minor ,
+cfc638cf-3dea-4cda-ac56-3395560290b4,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Just pains.
+Bot: Got it. I can schedule a Video Visit, a Physical, or an Office Visit with [FIRST_NAME][PERSON_NAME][LAST_NAME] [LAST_NAME]. Which do you need?
+User: Office.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] [LAST_NAME] availability for you.
+Bot: The earliest available appointment is either [DATE] afternoon, on [DATE] or [DATE] afternoon, on [DATE], which do you prefer?
+",Conversation-Level Red Flags,Conversation ends without resolution,,,Unwanted Friction,
+bbab2d61-4b37-44ee-8b13-97ae2eaccaab,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello. I'm just calling to
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a new appointment, Cancel an appointment, Schedule a lab appointment, Reschedule an appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Rush.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+Bot: I didn't quite hear you, can you say it again?
+User: Representative.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Coverage Gaps,Unsupported appointment type,,,Unwanted Friction,
+b2d9b2cc-3470-4594-a765-3590070ce7f3,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: I'm looking for a
+User: Schedule an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,Escalation after success,,,Minor ,
+7e239203-8bb6-4c7e-a82a-8df5e426b569,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+User: Schedule an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Checkup.
+Bot: Got it. I can schedule an Office Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Office visit.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: The earliest available appointment is either this [DATE] morning or [DATE] afternoon, which do you prefer?
+User: [DATE] morning.
+Bot: There's just one spot open [DATE][DATE] 8:45 AM. Does that work for you?
+User: No.
+Bot: What about this [DATE] afternoon or [DATE] morning, on [DATE]?
+User: [DATE] morning.
+User: [DATE].
+Bot: [DATE][DATE], there are available time slots at 8:30 AM or 11:00 AM, which of those works for you?
+User: 08/30.
+Bot: I didn’t quite catch that.
+Bot: [DATE][DATE], there are available time slots at 8:30 AM or 11:00 AM, which of those works for you?
+User: [DATE]. [DATE].
+Bot: I didn’t quite catch that.
+Bot: [DATE][DATE], there are available time slots at 8:30 AM or 11:00 AM, which of those works for you?
+",NLU (Understanding) Failures,Repeated clarification prompts,,,Unwanted Friction,
+f88e73e0-0310-4ef1-be33-c8144f643584,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Good
+User: 1. I just put things like
+User: Appointment.
+Bot: OK, it sounds like you'd like to Hear your appointment details, Schedule a new appointment, Schedule a lab appointment, Reschedule an appointment or Cancel an appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+c234c76e-810f-4023-b896-2a77c35abc51,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Knee injury.
+Bot: To confirm, you are looking to Consult about symptoms. Is that correct?
+User: An appointment.
+User: No.
+Bot: Let's try once more.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: An appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,Bot repeats phrases word-for-word,UX / Flow Failures,Abrupt escalation,Unwanted Friction,
+e8dae519-3247-4028-b8d6-f472a40c9683,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Set up a Medicare physical appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+0be60474-72d9-40e2-9165-2b0d6b57135b,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Made an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: I didn’t quite catch that.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+851b56f4-1011-4be1-965d-5ddf2107d724,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: I need an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Doctor's appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+475937e4-7d24-439c-9fda-6c39239b514f,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: An appointment
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Cancel an appointment, Hear your appointment details, Reschedule an appointment or Schedule a new appointment. Which of those are you looking for?
+User: With doctor [LAST_NAME].
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+46f4cb76-430a-42cd-8428-dfed9a11effd,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Need an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule a live appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Schedule a lab appointment.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+User: '19 excuse me. [DATE].
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: I didn’t quite catch that.
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: It seems that identification with the date of birth [DATE] has failed. Could you please confirm the date of birth is correct or provide a new one?
+User: [DATE_OF_BIRTH]
+User: [DATE_OF_BIRTH]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Complex phrasing ignored,UX / Flow Failures,Abrupt escalation,Unwanted Friction,
+c9a2ddc6-d015-4dda-8a8f-e4971f66f6fd,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointance.
+Bot: OK, it sounds like you'd like to Hear your appointment details, Schedule a lab appointment, Reschedule an appointment, Schedule a new appointment or Cancel an appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Back pain.
+Bot: Got it. I can schedule an Office Visit, a Video Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Physical.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] II's availability for you.
+Bot: The earliest available appointment is either [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE], which do you prefer?
+User: [DATE].
+User: 27th.
+Bot: [DATE][DATE], there are available time slots at 9:30 AM or 11:00 AM, which of those works for you?
+User: You know what? I I think I wanna do a video.
+User: Conference.
+Bot: I didn’t quite catch that.
+Bot: [DATE][DATE], there are available time slots at 9:30 AM or 11:00 AM, which of those works for you?
+User: Neither. I need a center appointment.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No.
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No. Doesn't work.
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Thank you.
+",NLU (Understanding) Failures,Complex phrasing ignored,,,Unwanted Friction,User changes their mind and the bot doesn’t know how to react
+aef6ccd6-1da6-4c93-b286-4b6042e39d6d,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: To make an appointment
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+15efa40c-5d9d-46b2-905c-e1c2550adc61,"User: No.
+Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Five
+User: To make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: This Medicare physical.
+User: Yeah.
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+ff0e9329-8687-4465-8cba-e0b409c67ed2,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+Bot: I didn't quite hear you, can you say it again?
+User: I hear Repeat options.
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [LAST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+990de1c7-054e-4dd5-b62c-3baf2a42f122,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Like a new
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+User: Make an initial appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: A
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: That is correct.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [PERSON_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,NLU (Understanding) Failures,Complex phrasing ignored,Critical blocker,User asks for an initial appointment to be schdeuled and is sent to the general appoinment voice menu.
+222ae211-7e5a-4700-bf83-f0cc59419633,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Facial dog bite.
+Bot: To confirm, you are looking to Consult about symptoms. Is that correct?
+User: A lot of injury.
+Bot: Let's try once more.
+Bot: What are you calling about today?
+User: I would like to visit because of an injury.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+Bot: I didn't quite hear you, can you say it again?
+User: Making
+User: For a walk in.
+Bot: I need a clear yes or no to continue.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,NLU (Understanding) Failures,Complex phrasing ignored,Critical blocker,Additional errors detected with the scheduling and verification.
+b6c41f67-d018-4067-81c3-1c9735774b82,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Blood work appointment.
+Bot: OK, it sounds like you'd like to Schedule a lab appointment, Reschedule an appointment, Schedule a new appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+User: Yes.
+Bot: What's the reason of your appointment?
+User: Blood work.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Blood work.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,User repeats themselves multiple times,Software / Technical Failures,Error handoff,Unwanted Friction,
+c55f57d1-3629-4b35-993e-b075dbeb5af0,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Schedule a lab appointment, Schedule a new appointment, Reschedule an appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Schedule an appointment.
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: I'll send a 4-digit code to the patient's phone to confirm their identity. Please read it back or enter it when you're ready, is that ok?
+User: No.
+Bot: I understand.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Error handoff,,,,
+d2af1292-b867-41fa-8160-04aa9665ac91,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [PERSON_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+90403741-2057-47ca-9f62-137f77b9a961,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Schedule a new appointment, Schedule a lab appointment or Reschedule an appointment. Which of those are you looking for?
+User: Schedule.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Injection with doctor [FIRST_NAME][PERSON_NAME][LAST_NAME].
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Ultrasound injection.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,Escalation after success,,,,
+d5369709-6b50-4326-bb28-ccf195a5a50b,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: A minute.
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+User: An appointment.
+Bot: OK, it sounds like you'd like to Hear your appointment details, Reschedule an appointment, Cancel an appointment, Schedule a new appointment or Schedule a lab appointment. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Correct.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,NLU (Understanding) Failures,Repeated clarification prompts,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+16d62ebd-f64e-4a75-9756-0635131c911e,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule a doctor's appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+Bot: I didn't quite hear you, can you say it again?
+User: Schedule a [DATE] appointment.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you Shalethia. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,NLU (Understanding) Failures,Repeated clarification prompts,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+66893e9e-b7cf-45c6-a0f2-ba6cb0e14941,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hi.
+User: Appointment.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Schedule a new appointment, Cancel an appointment, Schedule a lab appointment or Hear your appointment details. Which of those are you looking for?
+User: New apartment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Correct.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: I have to agree with [FIRST_NAME].
+User: I would like for them to give me a shot for my poison that's covering my whole body.
+Bot: Got it. I can schedule a Physical, a Video Visit, or an Office Visit with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: [FIRST_NAME] with an appointment for a shot for my poison. Okay. And maybe bites. I'm not sure.
+User: So I have to go with any gift.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: Well let's just say
+User: Just two.
+User: I'm very grateful. I really am. And [FIRST_NAME] will be too. Thank you.
+",UX / Flow Failures,Politeness / tone mismatch,Conversation-Level Red Flags,Conversation ends without resolution,Critical blocker,
+171f24c8-16bc-49b8-9e3f-b7b2553cdfe8,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Schedule a new appointment, Cancel an appointment, Schedule a lab appointment or Hear your appointment details. Which of those are you looking for?
+User: Do a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+b85f194e-d1ae-4c9a-8739-ccd40097b5c1,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Your appointment
+Bot: OK, it sounds like you'd like to Reschedule an appointment or Cancel an appointment. Which of those are you looking for?
+User: I would like to make an appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details
+c9a9bff7-ea78-4c59-beaf-9ca1b29b43fe,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Schedule an appointment.
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule a appointment with doctor.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: General visit.
+Bot: I found a few possible appointment types that match your description. Could you tell me a bit more about why you'd like to be seen, so I can make sure I'm scheduling the right one?
+User: Fill prescriptions.
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,Escalation after success,,,Unwanted Friction,
+7a00113e-9d4c-4ae5-8e23-56c2dfc0763d,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Cancel an appointment, Hear your appointment details, Reschedule an appointment, Schedule a new appointment or Schedule a lab appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [LAST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+1ad2c2e1-051f-40ad-b459-9f2881d2ef93,"User: No. And I've looked in there.
+Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make appointment. [FIRST_NAME] Highland.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+fd5e6251-ace0-42cc-ad87-fb5de121cd09,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: I'd like
+User: Get an appointment?
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: SKU.
+User: Yes.
+User: Schedule appointment.
+User: Schedule appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Correct.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+User: Kids can have their profile your husband your wife. Everybody can have
+Bot: Thank you [LAST_NAME]. I was able to verify your details.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: can start being healthy together. Think how much money you spend a family purpose.
+User: You make.
+User: Can start to be healthier together.
+",Coverage Gaps,Multi-intent failure,NLU (Understanding) Failures,Complex phrasing ignored,Unwanted Friction,
+9049ebc2-69f2-4dcb-8e06-8b19a3095ab0,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Schedule a new appointment, Hear your appointment details, Cancel an appointment, Reschedule an appointment or Schedule a lab appointment. Which of those are you looking for?
+User: Schedule a sick appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+66dde471-6d36-4b80-9d5e-ba7c7b371085,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: To do an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Agreement with my PCP.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you Madhu. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+a22e912e-66c3-4c92-8a0c-d0950cad15cd,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointments.
+Bot: OK, it sounds like you'd like to Schedule a new appointment, Schedule a lab appointment, Cancel an appointment, Reschedule an appointment or Hear your appointment details. Which of those are you looking for?
+User: Schedule an appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Annual.
+Bot: Got it. I can schedule a Physical, a Video Visit, or an Office Visit with [LAST_NAME][PERSON_NAME][FIRST_NAME]. Which do you need?
+User: Wellness visit.
+User: Office visit.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: I can schedule your appointment for either [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE], which do you prefer?
+User: Neither.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No.
+User: [DATE].
+Bot: I couldn't find any availability for the requested time, but here are the closest dates I have.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No.
+User: No.
+User: No.
+User: No.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No. [DATE].
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No. No.
+User: No.
+User: No.
+User: No.
+User: Cut
+User: Customer service.
+User: Customer service.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Conversation-Level Red Flags,User repeats themselves multiple times,NLU (Understanding) Failures,Menu loops,Unwanted Friction,
+56887549-0218-4703-80ca-fbe02e239f5d,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Make an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Doctor's appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: I didn’t quite catch that.
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [PERSON_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Cough.
+Bot: Got it. I can schedule a Physical, a Video Visit, or an Office Visit with [FIRST_NAME][PERSON_NAME][LAST_NAME]. Which do you need?
+User: Office visit.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME] availability for you.
+Bot: The earliest available appointment is either [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE], which do you prefer?
+Bot: I didn't quite hear you, can you say it again?
+",NLU (Understanding) Failures,Slot availability crash,Conversation-Level Red Flags,Conversation ends without resolution,,
+cce8224e-fc38-40fb-84d1-a62dae05adbe,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointment.
+Bot: OK, it sounds like you'd like to Reschedule an appointment, Hear your appointment details, Cancel an appointment, Schedule a lab appointment or Schedule a new appointment. Which of those are you looking for?
+User: Schedule a new appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Schedule a new appointment.
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",Software / Technical Failures,Slot availability crash,Conversation-Level Red Flags,Escalation after success,Critical blocker,Immediate transfer after verification of patient details as well as abrupt escalation in UX flow.
+4935f329-872f-4528-987e-096eaba84bf6,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Quite difficult.
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+User: First class flight physical.
+Bot: I didn’t quite catch that.
+Bot: What are you calling about [DATE]?
+User: A physical.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: An appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+User: I'm Kent.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Bot: Please hold while I pull up the rest of your file
+Bot: What's the reason of your appointment?
+User: Flights physical.
+User: What?
+Bot: Got it. I can schedule an Office Visit, or a Physical with [FIRST_NAME][PERSON_NAME][LAST_NAME] Which do you need?
+User: Physical.
+Bot: No problem, let me check [FIRST_NAME][PERSON_NAME][LAST_NAME]'s availability for you.
+Bot: The earliest available appointment is either this [DATE] morning or [DATE] afternoon, which do you prefer?
+User: No.
+Bot: What about this [DATE] afternoon or this [DATE] morning?
+User: No.
+Bot: What about this [DATE] morning or [DATE] afternoon, on [DATE]?
+User: No.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: Nurse.
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] morning, on [DATE] or [DATE] afternoon, on [DATE]?
+User: No.
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No.
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No.
+Bot: I didn’t quite catch that.
+Bot: What about [DATE] afternoon, on [DATE] or [DATE] morning, on [DATE]?
+User: No.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Repeated clarification prompts,UX / Flow Failures,Abrupt escalation,Unwanted Friction,"Instead of explaining, why they are being transferred, the bot stops suggesting dates and transfers "
+0af77745-ccb6-483e-b395-168ecf1c56a2,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Appointments for speaking
+User: Booking a physical.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Appointment.
+Bot: It sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+Bot: I didn't quite hear you, can you say it again?
+User: Schedule a physical.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Thank you [FIRST_NAME]. I was able to verify your details.
+Thank you.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+",NLU (Understanding) Failures,Repeated clarification prompts,Software / Technical Failures,Slot availability crash,Unwanted Friction,
+26ada50e-c825-401c-a524-cc7050b49405,"Bot: Hello, I’m an AI Agent. If this is an emergency, please hang up and call 911. I can help with things like: appointments, referrals, prescriptions and more. If you are a provider, ask for the provider line
+For Spanish, say Spanish.
+Bot: What are you calling about [DATE]?
+User: Hello?
+User: Scheduling an appointment.
+Bot: OK, it sounds like you'd like to Schedule an appointment, Schedule a lab appointment or Schedule an immunization. Which of those are you looking for?
+User: Schedule an annual visit doctor visit appointment.
+Bot: To confirm, you are looking to Schedule an appointment. Is that correct?
+User: Yes.
+Bot: Sure, I can help with that.
+Bot: Just a moment.
+Bot: I wasn't able to find a record linked to the number you are calling from.
+Bot: Is there another number that could be on file for the patient?
+User: Yes.
+Bot: Can you please provide or enter the patient's phone number?
+User: [PHONE_NUMBER]
+Bot: I didn’t quite catch that.
+Bot: Could you please repeat or re enter the phone number?
+User: [PHONE_NUMBER]
+Bot: I didn't quite hear you, can you say it again?
+User: [PHONE_NUMBER]
+Bot: Can you please provide or enter the patient's date of birth?
+User: [DATE_OF_BIRTH]
+Bot: And the patient's Zip Code, please?
+User: [ZIPCODE]
+Bot: Please hold while I verify the details.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: That
+User: Number is a landline.
+Bot: I need a clear yes or no to continue.
+Bot: Alright, to protect the patient's privacy, I'll send a one-time code to the patient's phone, and then ask you to read it back to me. Is it okay to proceed?
+User: No.
+User: No.
+User: That's a landline.
+Bot: I understand.
+Bot: I am transferring you to a live agent for further assistance, please hold.
+User: J I
+",NLU (Understanding) Failures,Repeated clarification prompts,NLU (Understanding) Failures,Complex phrasing ignored,Unwanted Friction,"If multiple numbers are on file, then the KYC/ Verification should proceed or suggest sending the verification to the users email on file. "
